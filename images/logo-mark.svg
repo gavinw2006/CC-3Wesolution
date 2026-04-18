@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 3WeSolution — Icon mark only (three W letters) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -18 144 68"
+     width="144" height="68" role="img" aria-label="3WeSolution icon">
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M -15,-14 L -6,14 L 0,0 L 6,14 L 15,-14"
+          transform="translate(26,16) rotate(-90)"
+          stroke="#6e6e73" stroke-width="5"/>
+    <path d="M -15,-14 L -6,14 L 0,0 L 6,14 L 15,-14"
+          transform="translate(68,16)"
+          stroke="#1d1d1f" stroke-width="7"/>
+    <path d="M -15,-14 L -6,14 L 0,0 L 6,14 L 15,-14"
+          transform="translate(110,16) rotate(90)"
+          stroke="#6e6e73" stroke-width="5"/>
+  </g>
+</svg>

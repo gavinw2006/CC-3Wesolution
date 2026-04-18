@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – 3WeSolution</title>
+  <meta name="description" content="Get in touch with 3WeSolution. Free consultations, project quotes, and expert advice on web services and digital risk protection."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 64px;
+      align-items: start;
+      margin-top: 64px;
+    }
+
+    .info-card {
+      background: var(--bg-alt);
+      border-radius: 24px;
+      padding: 40px;
+    }
+
+    .info-card h3 {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -.5px;
+      margin-bottom: 8px;
+    }
+
+    .info-card > p {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 36px;
+      line-height: 1.6;
+    }
+
+    .contact-item-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .ci-icon {
+      width: 44px; height: 44px;
+      background: var(--bg);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .ci-body h4 { font-size: 13px; font-weight: 600; margin-bottom: 3px; }
+    .ci-body a, .ci-body p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+    .ci-body a:hover { color: var(--blue); }
+
+    .divider {
+      height: 1px;
+      background: var(--border-light);
+      margin: 28px 0;
+    }
+
+    .response-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg);
+      border-radius: 100px;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+    .response-badge .dot {
+      width: 8px; height: 8px;
+      background: #34c759;
+      border-radius: 50%;
+    }
+
+    /* Form card */
+    .form-card {
+      background: var(--bg-alt);
+      border-radius: 24px;
+      padding: 48px;
+    }
+
+    .form-card h3 {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -.5px;
+      margin-bottom: 6px;
+    }
+
+    .form-card > p {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 36px;
+    }
+
+    .service-select-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .service-chip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      cursor: pointer;
+      transition: border-color .2s, background .2s;
+      user-select: none;
+    }
+    .service-chip input[type="checkbox"] { display: none; }
+    .service-chip:hover { border-color: var(--blue); }
+    .service-chip.selected {
+      border-color: var(--blue);
+      background: var(--blue-tint);
+      color: var(--blue);
+    }
+
+    .submit-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .privacy-note {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .success-msg {
+      display: none;
+      background: #f0fdf4;
+      border: 1px solid #86efac;
+      border-radius: 12px;
+      padding: 16px 20px;
+      font-size: 14px;
+      color: #166534;
+      margin-top: 16px;
+    }
+
+    /* FAQ */
+    .faq-list { margin-top: 56px; max-width: 720px; margin-left: auto; margin-right: auto; }
+    .faq-item {
+      border-bottom: 1px solid var(--border-light);
+      padding: 24px 0;
+    }
+    .faq-item:first-child { border-top: 1px solid var(--border-light); }
+    .faq-q {
+      font-size: 17px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      color: var(--text);
+      letter-spacing: -.2px;
+    }
+    .faq-q .arrow {
+      font-size: 13px;
+      color: var(--text-muted);
+      transition: transform .25s ease;
+      flex-shrink: 0;
+    }
+    .faq-item.open .faq-q .arrow { transform: rotate(180deg); }
+    .faq-a {
+      display: none;
+      padding-top: 14px;
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    @media(max-width: 860px){
+      .contact-wrapper { grid-template-columns: 1fr; gap: 32px; }
+      .form-card { padding: 32px 24px; }
+      .info-card { padding: 28px 24px; }
+      .service-select-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">3W<span>eSolution</span></a>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-dropdown">
+        <a href="#">Services</a>
+        <div class="dropdown-menu">
+          <a href="services/website-design.html"><span class="icon">🎨</span>Website Design</a>
+          <a href="services/web-hosting.html"><span class="icon">☁️</span>Web Hosting & Ops</a>
+          <a href="services/certificate.html"><span class="icon">🔒</span>Certificate Mgmt</a>
+          <a href="services/domain.html"><span class="icon">🌐</span>Domain Mgmt</a>
+          <a href="services/email.html"><span class="icon">✉️</span>Email Mgmt</a>
+          <a href="services/social-media.html"><span class="icon">📱</span>Social Media Mgmt</a>
+          <a href="services/digitalization.html"><span class="icon">⚡</span>Digitalization</a>
+          <a href="services/digital-risk.html"><span class="icon">🛡️</span>Digital Risk Protection</a>
+        </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a class="lang-switch" href="cn/contact.html"><span>🌐</span><span class="active-lang">EN</span> | 中文</a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> › Contact</div>
+    <span class="section-label">Get in Touch</span>
+    <h1>Let's Start a Conversation.</h1>
+    <p>Tell us what you're working on. We'll respond within one business day with a clear plan and honest advice — no sales pressure.</p>
+  </div>
+</section>
+
+<!-- ── CONTACT FORM + INFO ── -->
+<section style="padding-top:0">
+  <div class="container">
+    <div class="contact-wrapper">
+
+      <!-- LEFT: contact info -->
+      <div class="info-card">
+        <h3>Contact Information</h3>
+        <p>Reach us directly or use the form — we monitor all channels and respond fast.</p>
+
+        <div class="contact-item-row">
+          <div class="ci-icon">✉️</div>
+          <div class="ci-body">
+            <h4>Email</h4>
+            <a href="mailto:3wesolution@gmail.com">3wesolution@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="contact-item-row">
+          <div class="ci-icon">💬</div>
+          <div class="ci-body">
+            <h4>WeChat / Line</h4>
+            <p>Available on request after initial contact</p>
+          </div>
+        </div>
+
+        <div class="contact-item-row">
+          <div class="ci-icon">🌏</div>
+          <div class="ci-body">
+            <h4>Service Regions</h4>
+            <p>Asia-Pacific · Australia · Europe · North America</p>
+          </div>
+        </div>
+
+        <div class="contact-item-row">
+          <div class="ci-icon">🕐</div>
+          <div class="ci-body">
+            <h4>Business Hours</h4>
+            <p>Mon – Fri, 9 am – 6 pm AEST (UTC+10)<br>Emergency DRP support: 24/7</p>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="response-badge">
+          <div class="dot"></div>
+          Typical reply within 4 business hours
+        </div>
+
+        <div class="divider"></div>
+
+        <p style="font-size:13px;color:var(--text-muted);line-height:1.6">
+          For urgent <strong>Digital Risk Protection</strong> incidents — active phishing campaigns, brand impersonation, or takedown emergencies — email us directly and mark your subject line <strong>[URGENT DRP]</strong>.
+        </p>
+      </div>
+
+      <!-- RIGHT: form -->
+      <div class="form-card">
+        <h3>Send Us a Message</h3>
+        <p>Free consultation — no commitment required.</p>
+
+        <form id="contactForm" novalidate>
+          <div class="form-row" style="margin-bottom:18px">
+            <div class="form-group" style="margin:0">
+              <label for="fname">First Name *</label>
+              <input type="text" id="fname" name="fname" placeholder="Jane" required/>
+            </div>
+            <div class="form-group" style="margin:0">
+              <label for="lname">Last Name *</label>
+              <input type="text" id="lname" name="lname" placeholder="Smith" required/>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Work Email *</label>
+            <input type="email" id="email" name="email" placeholder="jane@company.com" required/>
+          </div>
+
+          <div class="form-group">
+            <label for="company">Company / Organisation</label>
+            <input type="text" id="company" name="company" placeholder="Acme Corp"/>
+          </div>
+
+          <div class="form-group">
+            <label>Services You're Interested In</label>
+            <div class="service-select-grid">
+              <label class="service-chip"><input type="checkbox" name="svc" value="web-design"/>🎨 Website Design</label>
+              <label class="service-chip"><input type="checkbox" name="svc" value="hosting"/>☁️ Web Hosting</label>
+              <label class="service-chip"><input type="checkbox" name="svc" value="drp"/>🛡️ Digital Risk Protection</label>
+              <label class="service-chip"><input type="checkbox" name="svc" value="domain"/>🌐 Domain Management</label>
+              <label class="service-chip"><input type="checkbox" name="svc" value="email"/>✉️ Email Management</label>
+              <label class="service-chip"><input type="checkbox" name="svc" value="social"/>📱 Social Media</label>
+              <label class="service-chip"><input type="checkbox" name="svc" value="cert"/>🔒 Certificate Mgmt</label>
+              <label class="service-chip"><input type="checkbox" name="svc" value="digital"/>⚡ Digitalization</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="budget">Approximate Budget</label>
+            <select id="budget" name="budget">
+              <option value="" disabled selected>Select a range…</option>
+              <option>Under $1,000</option>
+              <option>$1,000 – $5,000</option>
+              <option>$5,000 – $20,000</option>
+              <option>$20,000 – $50,000</option>
+              <option>$50,000+</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Tell Us About Your Project *</label>
+            <textarea id="message" name="message" rows="5" placeholder="Describe your goals, current challenges, or any specific questions you have…" required></textarea>
+          </div>
+
+          <div class="submit-row">
+            <button type="submit" class="btn-primary" style="padding:14px 32px;font-size:15px">
+              Send Message →
+            </button>
+            <p class="privacy-note">🔒 Your information is never shared with third parties.</p>
+          </div>
+
+          <div class="success-msg" id="successMsg">
+            ✅ Thanks! We've received your message and will reply within one business day.
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="bg-secondary">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">FAQ</span>
+      <h2 class="section-title">Common Questions</h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">How quickly can you start on a new project? <span class="arrow">▾</span></div>
+        <div class="faq-a">For most services we can begin within 3–5 business days of scoping. Urgent Digital Risk Protection incidents can be activated same day.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you work with clients outside Asia-Pacific? <span class="arrow">▾</span></div>
+        <div class="faq-a">Yes. While our roots are in Asia-Pacific, we actively serve clients in Australia, Europe, and North America. All our services are delivered remotely with timezone-friendly communication.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What makes your Digital Risk Protection different? <span class="arrow">▾</span></div>
+        <div class="faq-a">We combine 15 years of frontline DRP experience with the AI-driven detection platform from our partner Cyberoo.ai — a partnership now entering its 5th year. Most agencies offer expertise or technology, not both.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can you handle just one service, or do I need a bundle? <span class="arrow">▾</span></div>
+        <div class="faq-a">Absolutely — each service is available standalone. Many clients start with web design or hosting and add DRP or domain management as their needs grow. There's no obligation to bundle.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you offer ongoing retainer support? <span class="arrow">▾</span></div>
+        <div class="faq-a">Yes. Most of our clients work with us on a monthly retainer basis, which includes proactive monitoring, maintenance, reporting, and dedicated account support. We'll recommend the right model during your free consultation.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Not Ready to Fill a Form?</h2>
+    <p>Just email us directly. We're real people who reply to every message.</p>
+    <a class="btn-white" href="mailto:3wesolution@gmail.com">3wesolution@gmail.com →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">3We<span>Solution</span></div>
+        <p>AI-Powered Website Design & Web Services. We build, manage, and protect your digital world.</p>
+        <div class="social-links">
+          <a href="#" title="LinkedIn">in</a>
+          <a href="#" title="Twitter/X">𝕏</a>
+          <a href="#" title="WeChat">💬</a>
+          <a href="#" title="Facebook">f</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services/website-design.html">Website Design</a></li>
+          <li><a href="services/web-hosting.html">Web Hosting & Ops</a></li>
+          <li><a href="services/certificate.html">Certificate Mgmt</a></li>
+          <li><a href="services/domain.html">Domain Management</a></li>
+          <li><a href="services/email.html">Email Management</a></li>
+          <li><a href="services/social-media.html">Social Media Mgmt</a></li>
+          <li><a href="services/digitalization.html">Digitalization</a></li>
+          <li><a href="services/digital-risk.html">Digital Risk Protection</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:3wesolution@gmail.com">3wesolution@gmail.com</a></li>
+          <li><a href="cn/index.html">🇨🇳 中文版</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 3WeSolution. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  /* Service chip toggle */
+  document.querySelectorAll('.service-chip').forEach(chip => {
+    chip.addEventListener('click', () => chip.classList.toggle('selected'));
+  });
+
+  /* FAQ accordion */
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-q').addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  /* Form submit — opens mailto with form data pre-filled */
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('button[type="submit"]');
+
+    const fname   = this.fname.value.trim();
+    const lname   = this.lname.value.trim();
+    const email   = this.email.value.trim();
+    const company = this.company.value.trim();
+    const budget  = this.budget.value;
+    const message = this.message.value.trim();
+    const services = [...this.querySelectorAll('input[name="svc"]:checked')]
+                       .map(cb => cb.value).join(', ');
+
+    const subject = `Enquiry from ${fname} ${lname}${company ? ' – ' + company : ''}`;
+    const body = [
+      `Name: ${fname} ${lname}`,
+      `Email: ${email}`,
+      company  ? `Company: ${company}`   : '',
+      services ? `Services: ${services}` : '',
+      budget   ? `Budget: ${budget}`     : '',
+      '',
+      message,
+    ].filter(Boolean).join('\n');
+
+    window.location.href =
+      `mailto:3wesolution@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    btn.textContent = 'Opening email client…';
+    setTimeout(() => {
+      document.getElementById('successMsg').style.display = 'block';
+      btn.textContent = 'Send Message →';
+      btn.disabled = false;
+    }, 1200);
+  });
+</script>
+</body>
+</html>

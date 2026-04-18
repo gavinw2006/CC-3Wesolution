@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  3WeSolution Logo
+  Icon: three W letters — left-rotated (-90°), normal, right-rotated (+90°)
+  Wordmark: "3W" black · "eSolution" blue
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 64"
+     width="420" height="64" role="img" aria-label="3WeSolution">
+
+  <!-- ═══════════════════════════════════════════
+       THREE-W ICON MARK
+       W local path (centered at origin):
+         M -15,-14  L -6,14  L 0,0  L 6,14  L 15,-14
+
+       W1 — turned left  (-90°) : translate(26,32) rotate(-90)
+       W2 — normal               : translate(68,32)
+       W3 — turned right (+90°) : translate(110,32) rotate(90)
+  ═══════════════════════════════════════════ -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- W1: left 90° — tips now face LEFT, opening faces RIGHT → shape ▷ -->
+    <path d="M -15,-14 L -6,14 L 0,0 L 6,14 L 15,-14"
+          transform="translate(26,32) rotate(-90)"
+          stroke="#6e6e73" stroke-width="3.5"/>
+
+    <!-- W2: normal — the anchor W -->
+    <path d="M -15,-14 L -6,14 L 0,0 L 6,14 L 15,-14"
+          transform="translate(68,32)"
+          stroke="#1d1d1f" stroke-width="5"/>
+
+    <!-- W3: right 90° — tips now face RIGHT, opening faces LEFT → shape ◁ -->
+    <path d="M -15,-14 L -6,14 L 0,0 L 6,14 L 15,-14"
+          transform="translate(110,32) rotate(90)"
+          stroke="#6e6e73" stroke-width="3.5"/>
+  </g>
+
+  <!-- ═══════════════════════════════════════════
+       WORDMARK  "3W" black · "eSolution" blue
+  ═══════════════════════════════════════════ -->
+  <text y="46"
+        font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif"
+        font-size="44" font-weight="700" letter-spacing="-2.5">
+    <tspan x="140" fill="#1d1d1f">3W</tspan><tspan fill="#0071e3">eSolution</tspan>
+  </text>
+
+</svg>
