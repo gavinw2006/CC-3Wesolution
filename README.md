@@ -136,7 +136,7 @@ Loaded by every page, provides:
 - **Mobile dropdown** — tap to expand services list on `≤768px`
 - **Scroll-reveal** — `IntersectionObserver` fades cards in as they enter viewport
 - **Counters** — `.num[data-count]` elements animate from 0 to target on scroll (uses `data-suffix` for units)
-- **Contact form** — constructs a `mailto:` URL from form fields and opens the user's email client pre-filled to `3wesolution@gmail.com`
+- **Contact form** — constructs a `mailto:` URL from form fields and opens the user's email client pre-filled to `info@3wesolution.com`
 
 ---
 
@@ -164,7 +164,7 @@ Loaded by every page, provides:
 The most content-rich service page. Uses a **page-scoped `<style>` block** for components not needed globally: `.partner-banner`, `.threat-grid`, `.threat-card`, `.process-steps`, `.experience-bar`. Highlights the 5-year Cyberoo.ai partnership with explicit stats (8,400+ takedowns, 350+ brands, <4h response).
 
 ### Contact Form → Email
-The contact form (`contact.html`) is a **purely static mailto solution** — no server, no third-party form service. On submit, JavaScript constructs a pre-filled `mailto:` URL from all form fields (name, email, company, selected services, budget, message) and opens the visitor's default email client addressed to `3wesolution@gmail.com`.
+The contact form (`contact.html`) is a **purely static mailto solution** — no server, no third-party form service. On submit, JavaScript constructs a pre-filled `mailto:` URL from all form fields (name, email, company, selected services, budget, message) and opens the visitor's default email client addressed to `info@3wesolution.com`.
 
 ### Animated Counters
 The homepage stats bar uses `data-count` / `data-suffix` HTML attributes driven by `main.js`. Example:
@@ -212,7 +212,7 @@ Full site built from scratch in a single session. All pages, styles, and scripts
 - 15+ years experience, 350+ clients, 8,400+ threat takedowns
 - Cyberoo.ai partnership: 5 years (since 2021)
 - Business hours: AEST (UTC+10)
-- Contact: 3wesolution@gmail.com
+- Contact: info@3wesolution.com
 - Copyright: © 2026 3WeSolution
 
 ### 2026-04-19 — Add Chinese website (`ba33d0f`)
@@ -265,6 +265,6 @@ Comprehensive audit of all CN pages against EN. Four pages had significant missi
 
 ## Contact
 
-**3wesolution@gmail.com**
+**info@3wesolution.com**
 
 © 2026 3WeSolution. All rights reserved.

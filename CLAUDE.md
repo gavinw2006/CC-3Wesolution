@@ -91,5 +91,5 @@ Every page nav follows this exact structure — **do not diverge**:
 - Founded: **2009**, Melbourne, Australia
 - Experience: **15+ years** in web services and Digital Risk Protection
 - Cyberoo.ai partnership: **5 years** (since 2021), for AI-driven scam detection
-- Contact: **3wesolution@gmail.com**
+- Contact: **info@3wesolution.com**
 - Services (8 total): Website Design, Web Hosting & Ops, Certificate Mgmt, Domain Mgmt, Email Mgmt, Social Media Mgmt, Digitalization, Digital Risk Protection
