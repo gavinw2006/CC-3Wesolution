@@ -186,8 +186,10 @@ document.querySelectorAll('.faq-item').forEach(item=>{
     if(!open)item.classList.add('open');
   });
 });
-document.querySelectorAll('.service-chip').forEach(chip=>{
-  chip.addEventListener('click',()=>chip.classList.toggle('selected'));
+document.querySelectorAll('.service-chip input[type="checkbox"]').forEach(cb=>{
+  cb.addEventListener('change',()=>{
+    cb.closest('.service-chip').classList.toggle('selected',cb.checked);
+  });
 });
 document.getElementById('contactForm').addEventListener('submit',function(e){
   e.preventDefault();

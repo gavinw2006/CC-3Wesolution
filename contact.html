@@ -477,8 +477,10 @@
 <script src="js/main.js"></script>
 <script>
   /* Service chip toggle */
-  document.querySelectorAll('.service-chip').forEach(chip => {
-    chip.addEventListener('click', () => chip.classList.toggle('selected'));
+  document.querySelectorAll('.service-chip input[type="checkbox"]').forEach(cb => {
+    cb.addEventListener('change', () => {
+      cb.closest('.service-chip').classList.toggle('selected', cb.checked);
+    });
   });
 
   /* FAQ accordion */
