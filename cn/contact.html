@@ -91,7 +91,7 @@
         <p>直接联系我们或使用表单——我们全渠道监控，响应迅速。</p>
         <div class="contact-item-row">
           <div class="ci-icon">✉️</div>
-          <div class="ci-body"><h4>电子邮件</h4><a href="mailto:3wesolution@gmail.com">3wesolution@gmail.com</a></div>
+          <div class="ci-body"><h4>电子邮件</h4><a href="mailto:info@3wesolution.com">info@3wesolution.com</a></div>
         </div>
         <div class="contact-item-row">
           <div class="ci-icon">💬</div>
@@ -174,7 +174,7 @@
   <div class="container">
     <h2>不想填表单？</h2>
     <p>直接发邮件给我们，我们是真实的人，每封邮件必回。</p>
-    <a class="btn-white" href="mailto:3wesolution@gmail.com">3wesolution@gmail.com →</a>
+    <a class="btn-white" href="mailto:info@3wesolution.com">info@3wesolution.com →</a>
   </div>
 </section>
 
@@ -203,7 +203,7 @@ document.getElementById('contactForm').addEventListener('submit',function(e){
   const services=[...this.querySelectorAll('input[name="svc"]:checked')].map(cb=>cb.value).join(', ');
   const subject=`咨询来自 ${fname} ${lname}${company?' – '+company:''}`;
   const body=[`姓名: ${fname} ${lname}`,`邮箱: ${email}`,company?`公司: ${company}`:'',services?`服务: ${services}`:'',budget?`预算: ${budget}`:'','',message].filter(Boolean).join('\n');
-  window.location.href=`mailto:3wesolution@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href=`mailto:info@3wesolution.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   btn.textContent='正在打开邮件客户端…';
   setTimeout(()=>{document.getElementById('successMsg').style.display='block';btn.textContent='发送消息 →';btn.disabled=false;},1200);
 });
@@ -248,7 +248,7 @@ document.getElementById('contactForm').addEventListener('submit',function(e){
       <div class="footer-col">
         <h4>联系方式</h4>
         <ul>
-          <li><a href="mailto:3wesolution@gmail.com">3wesolution@gmail.com</a></li>
+          <li><a href="mailto:info@3wesolution.com">info@3wesolution.com</a></li>
           <li><a href="../index.html">🇦🇺 English版</a></li>
           <li><a href="#">隐私政策</a></li>
           <li><a href="#">服务条款</a></li>

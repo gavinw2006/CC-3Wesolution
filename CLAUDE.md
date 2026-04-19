@@ -84,6 +84,7 @@ Every page nav follows this exact structure — **do not diverge**:
 - The only permitted CN-specific CSS is `body.cn { font-family: ... }` in `style.css` for the Chinese font stack (PingFang SC / Hiragino Sans GB / Microsoft YaHei).
 - When a page-scoped `<style>` block is added to an English service page, copy the identical block to its CN counterpart.
 - When content or structure changes in any English page, apply the equivalent change (translated) to the matching CN page in the same commit.
+- double check all the logos and icons, as well as the contents are consistent with the brand guidelines provided by the client. Ensure that the colors, fonts, contents and overall design are exactly same in Chinese version website and align with the client's branding to maintain a cohesive and professional appearance across both language versions of the website.
 
 ## Key Business Facts (for content accuracy)
 
