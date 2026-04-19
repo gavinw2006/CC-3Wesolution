@@ -4,8 +4,127 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>数字风险防护 – 3WeSolution</title>
-  <meta name="description" content="3WeSolution 数字风险防护服务——凭借15年网络威胁情报与品牌防御一线经验，3WeSolution在威胁触达您的客……"/>
+  <meta name="description" content="3WeSolution数字风险防护服务——凭借15年网络威胁情报与品牌防御一线经验，在威胁触达您的客户之前即已完成检测、分析与处置。"/>
   <link rel="stylesheet" href="../../css/style.css"/>
+  <style>
+    .partner-banner {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      background: #f5f5f7;
+      border-radius: 20px;
+      padding: 36px 40px;
+      margin: 56px 0 0;
+    }
+    .partner-logo { font-size: 2.4rem; flex-shrink: 0; margin-top: 4px; }
+    .partner-banner h4 {
+      margin: 0 0 6px;
+      font-size: 11px;
+      color: #0071e3;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-weight: 600;
+    }
+    .partner-banner p {
+      margin: 0;
+      color: #6e6e73;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .threat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+      gap: 2px;
+      background: #e8e8ed;
+      border: 1px solid #e8e8ed;
+      border-radius: 24px;
+      overflow: hidden;
+      margin-top: 56px;
+    }
+    .threat-card {
+      background: #fff;
+      padding: 36px 32px;
+      transition: background .25s ease;
+    }
+    .threat-card:hover { background: #f5f5f7; }
+    .threat-card .threat-icon { font-size: 28px; margin-bottom: 16px; }
+    .threat-card h3 { font-size: 17px; font-weight: 600; margin-bottom: 9px; letter-spacing: -.2px; }
+    .threat-card p { font-size: 14px; color: #6e6e73; margin: 0; line-height: 1.65; }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2px;
+      background: #e8e8ed;
+      border: 1px solid #e8e8ed;
+      border-radius: 24px;
+      overflow: hidden;
+      margin-top: 56px;
+    }
+    .process-step {
+      background: #fff;
+      padding: 40px 32px;
+      transition: background .25s ease;
+    }
+    .process-step:hover { background: #f5f5f7; }
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px; height: 40px;
+      background: #0071e3;
+      border-radius: 50%;
+      font-weight: 600;
+      font-size: 15px;
+      color: #fff;
+      margin-bottom: 18px;
+    }
+    .process-step h3 { font-size: 17px; font-weight: 600; margin-bottom: 10px; letter-spacing: -.2px; }
+    .process-step p { font-size: 14px; color: #6e6e73; margin: 0; line-height: 1.65; }
+
+    .experience-bar {
+      background: #f5f5f7;
+      border-radius: 24px;
+      padding: 56px 48px;
+      margin-top: 40px;
+    }
+    .experience-bar .bar-title {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -.5px;
+      color: #1d1d1f;
+      margin-bottom: 48px;
+    }
+    .exp-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0;
+    }
+    .exp-stat {
+      text-align: center;
+      padding: 0 24px;
+      border-right: 1px solid #d2d2d7;
+    }
+    .exp-stat:last-child { border-right: none; }
+    .exp-stat .big {
+      font-size: 52px;
+      font-weight: 700;
+      color: #1d1d1f;
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+    .exp-stat .big-blue { color: #0071e3; }
+    .exp-stat p { margin: 10px 0 0; color: #6e6e73; font-size: 13px; line-height: 1.5; }
+
+    @media(max-width:640px){
+      .partner-banner { flex-direction: column; padding: 28px 24px; }
+      .experience-bar { padding: 36px 20px; }
+      .exp-stats { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .exp-stat { border-right: none; }
+    }
+  </style>
 </head>
 <body class="cn">
 
@@ -17,14 +136,14 @@
       <li class="nav-dropdown">
         <a href="#" class="active">服务</a>
         <div class="dropdown-menu">
-          <a href="../../services/website-design.html"><span class="icon">🎨</span>网站设计</a>
-          <a href="../../services/web-hosting.html"><span class="icon">☁️</span>网站托管与运维</a>
-          <a href="../../services/certificate.html"><span class="icon">🔒</span>证书管理</a>
-          <a href="../../services/domain.html"><span class="icon">🌐</span>域名管理</a>
-          <a href="../../services/email.html"><span class="icon">✉️</span>邮箱管理</a>
-          <a href="../../services/social-media.html"><span class="icon">📱</span>社交媒体管理</a>
-          <a href="../../services/digitalization.html"><span class="icon">⚡</span>数字化转型</a>
-          <a href="../../services/digital-risk.html"><span class="icon">🛡️</span>数字风险防护</a>
+          <a href="website-design.html"><span class="icon">🎨</span>网站设计</a>
+          <a href="web-hosting.html"><span class="icon">☁️</span>网站托管与运维</a>
+          <a href="certificate.html"><span class="icon">🔒</span>证书管理</a>
+          <a href="domain.html"><span class="icon">🌐</span>域名管理</a>
+          <a href="email.html"><span class="icon">✉️</span>邮箱管理</a>
+          <a href="social-media.html"><span class="icon">📱</span>社交媒体管理</a>
+          <a href="digitalization.html"><span class="icon">⚡</span>数字化转型</a>
+          <a href="digital-risk.html"><span class="icon">🛡️</span>数字风险防护</a>
         </div>
       </li>
       <li><a href="../../about.html">关于我们</a></li>
@@ -39,120 +158,251 @@
   </div>
 </nav>
 
+<!-- ── 页面标题 ── -->
 <section class="page-hero">
   <div class="container">
     <div class="breadcrumb"><a href="../../index.html">首页</a> › <a href="#">服务</a> › 数字风险防护</div>
     <span class="section-label">数字风险防护</span>
     <h1>保护您的品牌，<br>威胁来袭之前。</h1>
-    <p>凭借15年网络威胁情报与品牌防御一线经验，3WeSolution在威胁触达您的客户之前，即已完成检测、分析与处置。</p>
+    <p>凭借15年网络威胁情报与品牌防御一线经验，3WeSolution在威胁触达您的客户之前，即已完成检测、分析与处置——跨越每一个数字渠道。</p>
   </div>
 </section>
 
+<!-- ── 合作伙伴 ── -->
 <section>
   <div class="container">
-    <div class="text-center">
-      <span class="section-label">服务内容</span>
-      <h2 class="section-title">完整数字风险防护体验</h2>
+
+    <div class="partner-banner">
+      <div class="partner-logo">🤝</div>
+      <div>
+        <h4>技术合作伙伴</h4>
+        <p><strong>与Cyberoo.ai携手五年</strong> — 自2021年起，3WeSolution与全球AI驱动诈骗检测及品牌保护领军企业Cyberoo.ai建立战略合作。其平台持续监控域名、广告、社交渠道与应用商店，以机器速度检测并阻断诈骗活动——为我们的客户提供企业级威胁情报，并辅以专业人工研判。</p>
+      </div>
     </div>
-    <div class="service-detail-features">
-      <div class="detail-card"><div class="icon">🎣</div><h3>网络钓鱼与仿冒网站</h3><p>持续扫描实时检测仿冒您品牌的欺诈网站，快速下架，将客户曝险降至最低。</p></div>
-      <div class="detail-card"><div class="icon">📱</div><h3>恶意App检测</h3><p>App Store与Google Play中冒用您品牌的流氓应用，识别上报并推动下架。</p></div>
-      <div class="detail-card"><div class="icon">📢</div><h3>虚假广告拦截</h3><p>劫持您品牌关键词的诈骗广告，跨平台标记并提交紧急处置申请。</p></div>
-      <div class="detail-card"><div class="icon">💬</div><h3>社媒仿冒监控</h3><p>仿冒社交账号、未授权页面与诈骗社群7×24小时监控，持续跟进处理。</p></div>
-      <div class="detail-card"><div class="icon">💳</div><h3>支付与金融欺诈</h3><p>针对您客户的支付诈骗活动，从源头追踪、定位并予以阻断。</p></div>
-      <div class="detail-card"><div class="icon">🌐</div><h3>域名与基础设施滥用</h3><p>仿冒域名、相似URL及恶意托管基础设施识别，提交注册商停用处理。</p></div>
-      <div class="detail-card"><div class="icon">🦠</div><h3>恶意软件与品牌劫持</h3><p>以您品牌名义传播的恶意软件检测、攻击溯源归因并上报处置。</p></div>
-      <div class="detail-card"><div class="icon">📋</div><h3>合规取证</h3><p>完整证据链文档与审计记录，满足监管合规报告要求，随时备查。</p></div>
+
+    <div class="text-center" style="margin-top:64px">
+      <span class="section-label">15年专业积累</span>
+      <h2 class="section-title">领先威胁，整整十五年</h2>
+      <p class="section-subtitle">自2009年起，3WeSolution便深耕数字风险防护前线——彼时"网络威胁"尚未成为董事会议题。我们已守护亚太、欧洲及北美数百个品牌。</p>
     </div>
+
+    <div class="experience-bar">
+      <div class="bar-title">数字见证实力</div>
+      <div class="exp-stats">
+        <div class="exp-stat">
+          <div class="big big-blue">15+</div>
+          <p>年数字风险防护经验</p>
+        </div>
+        <div class="exp-stat">
+          <div class="big">8,400+</div>
+          <p>威胁成功处置下架</p>
+        </div>
+        <div class="exp-stat">
+          <div class="big">350+</div>
+          <p>全球受保护品牌</p>
+        </div>
+        <div class="exp-stat">
+          <div class="big big-blue">&lt;4h</div>
+          <p>平均下架响应时间</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
+<!-- ── 威胁覆盖 ── -->
 <section class="bg-secondary">
   <div class="container">
-    <div class="two-col">
-      <div class="col-visual">🛡️</div>
-      <div class="col-content">
-        <span class="section-label">我们的方式</span>
-        <h2>15年实战经验铸就防线</h2>
-        <p>我们在2009年就开始构建数字风险防护实践，彼时大多数机构甚至还不知道自己正在被仿冒。这份深度经验意味着我们能在攻击者出手之前预判其行动模式。</p>
-        <ul class="check-list">
-          <li>2009年起引领亚太品牌保护实践</li>
-          <li>AI增强人工分析——速度与洞察并重</li>
-          <li>覆盖注册商、平台与ISP的全球下架网络</li>
-          <li>Cyberoo.ai五年战略合作伙伴关系（自2021年）</li>
-          <li>监管就绪的合规取证与证据文档</li>
-          <li>7×24小时专属事件响应团队</li>
-        </ul>
-        <a class="btn-primary" href="../../contact.html">立即咨询 →</a>
+    <div class="text-center">
+      <span class="section-label">威胁覆盖范围</span>
+      <h2 class="section-title">每一个攻击面，全面防护。</h2>
+      <p class="section-subtitle">现代数字威胁不分渠道，我们的防护亦如此。全谱系保护覆盖攻击者利用的每一个渠道。</p>
+    </div>
+
+    <div class="threat-grid">
+      <div class="threat-card">
+        <div class="threat-icon">🎣</div>
+        <h3>网络钓鱼与仿冒网站</h3>
+        <p>持续扫描实时检测冒用您品牌的欺诈网站，快速推动下架，将客户曝险降至最低。</p>
+      </div>
+      <div class="threat-card">
+        <div class="threat-icon">📱</div>
+        <h3>恶意App检测</h3>
+        <p>App Store与Google Play中窃取您品牌权益的流氓应用，在造成大范围损害前识别、上报并推动下架。</p>
+      </div>
+      <div class="threat-card">
+        <div class="threat-icon">📢</div>
+        <h3>虚假广告拦截</h3>
+        <p>在Google、Facebook等平台劫持您品牌关键词的诈骗广告，标记后提交平台立即处置。</p>
+      </div>
+      <div class="threat-card">
+        <div class="threat-icon">💬</div>
+        <h3>社媒仿冒监控</h3>
+        <p>仿冒社交账号、未授权页面与冒用您名称或标识的诈骗社群，7×24小时监控并上报下架或限制。</p>
+      </div>
+      <div class="threat-card">
+        <div class="threat-icon">💳</div>
+        <h3>支付与金融欺诈</h3>
+        <p>针对您客户的支付诈骗活动，包括虚假发票与购买流程，从源头追踪、定位并阻断。</p>
+      </div>
+      <div class="threat-card">
+        <div class="threat-icon">🌐</div>
+        <h3>域名与基础设施滥用</h3>
+        <p>围绕您品牌构建的仿冒域名、相似URL及恶意托管基础设施，识别后提交注册商停用。</p>
+      </div>
+      <div class="threat-card">
+        <div class="threat-icon">🦠</div>
+        <h3>恶意软件与品牌劫持</h3>
+        <p>以您品牌名义传播的恶意文件与木马化软件，检测分析攻击溯源后上报相关部门处置。</p>
+      </div>
+      <div class="threat-card">
+        <div class="threat-icon">📋</div>
+        <h3>合规取证与监管防御</h3>
+        <p>完整证据链文档与审计记录，符合反诈骗监管框架要求——随时备查，合规无忧。</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ── 工作方式 ── -->
+<section>
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">我们的方法论</span>
+      <h2 class="section-title">检测。分析。处置。循环。</h2>
+      <p class="section-subtitle">我们的四阶段情报闭环持续运转——每天24小时，每周7天，覆盖每一个数字渠道。</p>
+    </div>
+
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">1</div>
+        <h3>检测与信号采集</h3>
+        <p>AI引擎扫描域名、广告网络、应用商店、社交平台与消费者举报流，实时将威胁信号汇聚为统一风险情报源。</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">2</div>
+        <h3>情报分析与关联</h3>
+        <p>信号关联升级为活动级情报。攻击者身份、基础设施模式、受害者定向画像与风险评分，按品牌、渠道、地区绘制全景图。</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">3</div>
+        <h3>处置与下架执行</h3>
+        <p>经验证的威胁转化为下架申请，提交至注册商、托管商、广告平台与应用商店——专业跟进直至彻底解决。</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">4</div>
+        <h3>报告与持续防御</h3>
+        <p>详细事件报告、合规证据包与趋势分析交付您的团队——同时闭环持续运转，适应不断演变的攻击战术。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 为何选择3WeSolution ── -->
+<section class="bg-secondary">
+  <div class="container">
+    <div class="two-col">
+      <div class="col-visual">🛡️</div>
+      <div class="col-content">
+        <span class="section-label">为何选择3WeSolution</span>
+        <h2>15年实战经验铸就防线</h2>
+        <p>我们不是在数字风险防护流行时才涉足这一领域——我们在2009年就从零构建了这一实践，彼时大多数机构甚至还不知道自己正在被仿冒。这份深度经验意味着我们能在攻击者出手之前预判其行动模式。</p>
+        <ul class="check-list">
+          <li>2009年起引领亚太品牌保护实践</li>
+          <li>AI增强人工分析——速度与洞察并重，无盲点</li>
+          <li>覆盖注册商、平台与ISP的全球下架网络</li>
+          <li>Cyberoo.ai五年战略合作，顶级威胁情报</li>
+          <li>监管就绪的合规取证与证据文档</li>
+          <li>7×24小时专属事件响应团队</li>
+        </ul>
+        <a class="btn-primary" href="mailto:3wesolution@gmail.com">联系DRP专家 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 服务方案 ── -->
+<section>
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">服务方案</span>
+      <h2 class="section-title">适配每种规模的防护方案</h2>
+      <p class="section-subtitle">无论您是守护单一品牌还是企业级品牌组合，我们都有专为您的风险画像量身定制的方案。</p>
+    </div>
+    <div class="pricing-grid" style="margin-top:48px">
+      <div class="pricing-card">
+        <h3>品牌盾牌</h3>
+        <div class="price">联系<span>我们获取报价</span></div>
+        <p class="desc">适合中小企业与成长型品牌的核心防护。</p>
+        <ul class="pricing-features">
+          <li>网络钓鱼与仿冒网站监控</li>
+          <li>社交媒体仿冒告警</li>
+          <li>域名滥用检测</li>
+          <li>每月最多10次下架申请</li>
+          <li>月度威胁摘要报告</li>
+          <li>邮件支持</li>
+        </ul>
+        <a class="btn-secondary" href="mailto:3wesolution@gmail.com" style="display:block;text-align:center">立即开始</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="pricing-badge">最受欢迎</div>
+        <h3>全谱系防护</h3>
+        <div class="price">联系<span>我们获取报价</span></div>
+        <p class="desc">成熟企业的全方位覆盖方案。</p>
+        <ul class="pricing-features">
+          <li>含品牌盾牌全部功能</li>
+          <li>恶意App与广告欺诈检测</li>
+          <li>支付欺诈监控</li>
+          <li>活动级情报图谱绘制</li>
+          <li>无限次下架申请</li>
+          <li>双周情报简报</li>
+          <li>专属分析师</li>
+        </ul>
+        <a class="btn-primary" href="mailto:3wesolution@gmail.com" style="display:block;text-align:center">立即开始</a>
+      </div>
+      <div class="pricing-card">
+        <h3>企业级防御</h3>
+        <div class="price">定制方案</div>
+        <p class="desc">适用于多品牌企业与受监管行业。</p>
+        <ul class="pricing-features">
+          <li>含全谱系防护全部功能</li>
+          <li>多品牌、多地区覆盖</li>
+          <li>监管合规证据包</li>
+          <li>高管级威胁情报简报</li>
+          <li>7×24小时事件响应热线</li>
+          <li>与您SOC的API集成</li>
+          <li>SLA保障响应时间</li>
+        </ul>
+        <a class="btn-secondary" href="mailto:3wesolution@gmail.com" style="display:block;text-align:center">联系我们</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
 <section class="cta-section">
   <div class="container">
     <h2>您的品牌此刻正在被盯上。</h2>
-    <p>大多数企业直到客户投诉才发现自己被仿冒。立即获取免费品牌威胁评估。</p>
+    <p>大多数企业直到客户投诉才发现自己被仿冒。立即获取免费品牌威胁评估，看看外面究竟潜伏着什么。</p>
     <a class="btn-white" href="mailto:3wesolution@gmail.com">申请免费威胁评估 →</a>
   </div>
 </section>
 
 <footer>
   <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="logo">3W<span>eSolution</span></div>
-        <p>AI驱动的网站设计与全方位网络服务，助力您的数字世界建设、管理与安全防护。</p>
-        <div class="social-links">
-          <a href="#" title="LinkedIn">in</a>
-          <a href="#" title="Twitter/X">𝕏</a>
-          <a href="#" title="微信">💬</a>
-          <a href="#" title="Facebook">f</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>服务</h4>
-        <ul>
-          <li><a href="../../services/website-design.html">网站设计</a></li>
-          <li><a href="../../services/web-hosting.html">网站托管与运维</a></li>
-          <li><a href="../../services/certificate.html">证书管理</a></li>
-          <li><a href="../../services/domain.html">域名管理</a></li>
-          <li><a href="../../services/email.html">邮箱管理</a></li>
-          <li><a href="../../services/social-media.html">社交媒体管理</a></li>
-          <li><a href="../../services/digitalization.html">数字化转型</a></li>
-          <li><a href="../../services/digital-risk.html">数字风险防护</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>公司</h4>
-        <ul>
-          <li><a href="../../about.html">关于我们</a></li>
-          <li><a href="../../contact.html">联系我们</a></li>
-          <li><a href="#">招贤纳士</a></li>
-          <li><a href="#">博客</a></li>
-          <li><a href="#">合作伙伴</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>联系方式</h4>
-        <ul>
-          <li><a href="mailto:3wesolution@gmail.com">3wesolution@gmail.com</a></li>
-          <li><a href="../../index.html">🇦🇺 English版</a></li>
-          <li><a href="#">隐私政策</a></li>
-          <li><a href="#">服务条款</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 3WeSolution. 版权所有。</p>
+    <div class="footer-bottom" style="border:none;padding:32px 0">
+      <p>© 2026 3WeSolution. 版权所有。 | <a href="mailto:3wesolution@gmail.com" style="color:var(--text-muted)">3wesolution@gmail.com</a></p>
       <div class="footer-bottom-links">
-        <a href="#">隐私</a>
-        <a href="#">条款</a>
-        <a href="#">网站地图</a>
+        <a href="../../index.html">首页</a>
+        <a href="../../about.html">关于我们</a>
+        <a href="../../contact.html">联系我们</a>
+        <a href="../../services/digital-risk.html">English</a>
       </div>
     </div>
   </div>
 </footer>
+
 <script src="../../js/main.js"></script>
 </body>
 </html>

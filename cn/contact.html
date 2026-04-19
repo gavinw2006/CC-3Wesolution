@@ -55,6 +55,11 @@
 .form-card{background:var(--bg-alt);border-radius:24px;padding:48px}
 .form-card h3{font-size:22px;font-weight:700;letter-spacing:-.5px;margin-bottom:6px}
 .form-card>p{font-size:15px;color:var(--text-muted);margin-bottom:36px}
+.service-select-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+.service-chip{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--bg);border:1.5px solid var(--border);border-radius:10px;font-size:13px;font-weight:500;color:var(--text);cursor:pointer;transition:border-color .2s,background .2s;user-select:none}
+.service-chip input[type="checkbox"]{display:none}
+.service-chip:hover{border-color:var(--blue)}
+.service-chip.selected{border-color:var(--blue);background:var(--blue-tint);color:var(--blue)}
 .submit-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:8px}
 .privacy-note{font-size:12px;color:var(--text-muted);line-height:1.5}
 .success-msg{display:none;background:#f0fdf4;border:1px solid #86efac;border-radius:12px;padding:16px 20px;font-size:14px;color:#166534;margin-top:16px}
@@ -110,24 +115,23 @@
         <p>免费咨询，无需承诺。</p>
         <form id="contactForm" novalidate>
           <div class="form-row" style="margin-bottom:18px">
-            <div class="form-group" style="margin:0"><label for="fname">姓名 *</label><input type="text" id="fname" name="fname" placeholder="张伟" required/></div>
-            <div class="form-group" style="margin:0"><label for="email">邮箱 *</label><input type="email" id="email" name="email" placeholder="zhang@company.com" required/></div>
+            <div class="form-group" style="margin:0"><label for="fname">姓 *</label><input type="text" id="fname" name="fname" placeholder="张" required/></div>
+            <div class="form-group" style="margin:0"><label for="lname">名 *</label><input type="text" id="lname" name="lname" placeholder="伟" required/></div>
           </div>
+          <div class="form-group"><label for="email">工作邮箱 *</label><input type="email" id="email" name="email" placeholder="zhang@company.com" required/></div>
           <div class="form-group"><label for="company">公司 / 机构</label><input type="text" id="company" name="company" placeholder="某某科技有限公司"/></div>
           <div class="form-group">
-            <label for="service">感兴趣的服务</label>
-            <select id="service" name="service">
-              <option value="" disabled selected>请选择服务……</option>
-              <option>网站设计</option>
-              <option>网站托管与运维</option>
-              <option>数字风险防护</option>
-              <option>域名管理</option>
-              <option>邮箱管理</option>
-              <option>社交媒体管理</option>
-              <option>证书管理</option>
-              <option>数字化转型</option>
-              <option>多项服务</option>
-            </select>
+            <label>感兴趣的服务</label>
+            <div class="service-select-grid">
+              <label class="service-chip"><input type="checkbox" name="svc" value="web-design"/>🎨 网站设计</label>
+              <label class="service-chip"><input type="checkbox" name="svc" value="hosting"/>☁️ 网站托管</label>
+              <label class="service-chip"><input type="checkbox" name="svc" value="drp"/>🛡️ 数字风险防护</label>
+              <label class="service-chip"><input type="checkbox" name="svc" value="domain"/>🌐 域名管理</label>
+              <label class="service-chip"><input type="checkbox" name="svc" value="email"/>✉️ 邮箱管理</label>
+              <label class="service-chip"><input type="checkbox" name="svc" value="social"/>📱 社交媒体</label>
+              <label class="service-chip"><input type="checkbox" name="svc" value="cert"/>🔒 证书管理</label>
+              <label class="service-chip"><input type="checkbox" name="svc" value="digital"/>⚡ 数字化转型</label>
+            </div>
           </div>
           <div class="form-group">
             <label for="budget">预算范围</label>
@@ -182,18 +186,21 @@ document.querySelectorAll('.faq-item').forEach(item=>{
     if(!open)item.classList.add('open');
   });
 });
+document.querySelectorAll('.service-chip').forEach(chip=>{
+  chip.addEventListener('click',()=>chip.classList.toggle('selected'));
+});
 document.getElementById('contactForm').addEventListener('submit',function(e){
   e.preventDefault();
   const btn=this.querySelector('button[type="submit"]');
-  const name=this.fname.value.trim();
+  const fname=this.fname.value.trim();
+  const lname=this.lname.value.trim();
   const email=this.email.value.trim();
   const company=this.company.value.trim();
-  const service=this.service.value;
   const budget=this.budget.value;
   const message=this.message.value.trim();
-  const subject=`咨询来自 ${name}${company?' – '+company:''}`;
-  const body=[`姓名: ${name}`,`邮箱: ${email}`,company?`公司: ${company}`:'',service?`服务: ${service}`:'',budget?`预算: ${budget}`:'','',message].filter(Boolean).join('
-');
+  const services=[...this.querySelectorAll('input[name="svc"]:checked')].map(cb=>cb.value).join(', ');
+  const subject=`咨询来自 ${fname} ${lname}${company?' – '+company:''}`;
+  const body=[`姓名: ${fname} ${lname}`,`邮箱: ${email}`,company?`公司: ${company}`:'',services?`服务: ${services}`:'',budget?`预算: ${budget}`:'','',message].filter(Boolean).join('\n');
   window.location.href=`mailto:3wesolution@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   btn.textContent='正在打开邮件客户端…';
   setTimeout(()=>{document.getElementById('successMsg').style.display='block';btn.textContent='发送消息 →';btn.disabled=false;},1200);
