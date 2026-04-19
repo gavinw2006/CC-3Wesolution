@@ -215,6 +215,52 @@ Full site built from scratch in a single session. All pages, styles, and scripts
 - Contact: 3wesolution@gmail.com
 - Copyright: © 2026 3WeSolution
 
+### 2026-04-19 — Add Chinese website (`ba33d0f`)
+Full Chinese mirror of all 11 pages generated under `cn/`. Both language versions now live — English at root, Chinese under `cn/` — linked via EN | 中文 switcher on every page.
+
+- `cn/index.html`, `cn/about.html`, `cn/contact.html` — root CN pages
+- `cn/services/` — all 8 CN service pages
+- Chinese font stack (`PingFang SC`, `Hiragino Sans GB`, `Microsoft YaHei`) via `body.cn` class
+- Relative path convention: `cn/*.html` uses `../`, `cn/services/*.html` uses `../../`
+
+---
+
+### 2026-04-19 — Fix nav dropdown unreachable (`eda554f`)
+
+Added invisible `::after` pseudo-element bridge on `.nav-dropdown` to fill the 12px gap between the Services trigger link and the dropdown panel. Without it, mouse hover was lost before reaching any submenu item.
+
+---
+
+### 2026-04-19 — Sync footer logo to nav bar (`0753627`)
+
+- Fixed wrong text split `3We|Solution` → `3W|eSolution` across all 14 pages with a footer brand
+- Updated footer logo span colour from `#34aadc` (stale blue) to `var(--blue)` (`#0071e3`) to match nav
+
+---
+
+### 2026-04-19 — Add bilingual design consistency rule (`fe3555f`)
+
+Added explicit hard rule to `CLAUDE.md`: CN and EN versions must always match in layout, colours, spacing, and components. Only permitted CN-only CSS is the Chinese font stack via `body.cn`. Updated stale note that `cn/` was empty.
+
+---
+
+### 2026-04-19 — Fix CN about page timeline + content updates (`c8ec451`)
+
+- Replaced card grid in CN about page with proper alternating timeline matching EN exactly (centre vertical line, blue dots, alternating left/right entries)
+- Added Mainland China (中国大陆) to 2018 Regional Expansion in both EN and CN
+- Renamed CN partners section heading from 顶级合作伙伴背书 to 顶级技术合作伙伴
+
+---
+
+### 2026-04-19 — Sync CN pages to match EN — add all missing sections (`960a8b4`)
+
+Comprehensive audit of all CN pages against EN. Four pages had significant missing content:
+
+- **`cn/services/digital-risk.html`** — complete rewrite: added page-scoped `<style>` block, Cyberoo.ai partner banner, experience bar stats (15+, 8,400+, 350+, <4h), replaced detail-card grid with `threat-grid`/`threat-card` tiles, added 4-phase methodology section, added 3-tier pricing (品牌盾牌 / 全谱系防护 / 企业级防御), simplified footer to match EN service page style
+- **`cn/contact.html`** — split single name field into 姓/名 matching EN fname/lname; replaced `<select>` service dropdown with 8 interactive chip checkboxes; added `.service-select-grid` / `.service-chip` CSS; updated form JS to collect multiple selections
+- **`cn/services/website-design.html`** — added 3-tier pricing section (基础版 $999 / 商业版 $2,499 / 企业版 Custom)
+- **`cn/services/web-hosting.html`** — expanded features from 6 to 8 cards matching EN; added 3-tier pricing section (基础版 $29/mo / 专业版 $79/mo / 企业版 Custom)
+
 ---
 
 ## Contact
