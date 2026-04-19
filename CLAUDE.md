@@ -68,12 +68,22 @@ Every page nav follows this exact structure — **do not diverge**:
 - Brand colours: **"3W"** = `#1d1d1f` (inherits), **"eSolution"** = `#0071e3` (via `<span>`)
 - Footer copyright year: **2026**
 - Business hours timezone: **AEST (UTC+10)**
-
+- double check all the logos and icons, as well as the contents are consistent with the brand guidelines provided by the client. Ensure that the colors, fonts, and overall design align with the client's branding to maintain a cohesive and professional appearance across the website.
 ## Page-Level Conventions
 
 - Service pages load `../css/style.css` and `../js/main.js`
 - `digital-risk.html` contains a page-scoped `<style>` block for components not in the global CSS (`.partner-banner`, `.threat-grid`, `.threat-card`, `.process-steps`, `.experience-bar`). Add similar blocks for other one-off page components rather than polluting the global stylesheet.
-- The `cn/` directory (Chinese version) exists but is **empty** — do not link to it until content is created.
+- The `cn/` directory contains the full Chinese mirror (11 pages). All CN pages share the same `css/style.css` and `js/main.js` as the English version.
+
+## Bilingual Design Consistency Rule
+
+**The Chinese version must always match the English version's design exactly.** This is a hard rule:
+
+- Never add, remove, or alter layout, colours, spacing, or components in `cn/` without making the identical change to the English counterpart, and vice versa.
+- Both versions share one stylesheet (`css/style.css`) and one script (`js/main.js`) — do not create separate CN-only stylesheets.
+- The only permitted CN-specific CSS is `body.cn { font-family: ... }` in `style.css` for the Chinese font stack (PingFang SC / Hiragino Sans GB / Microsoft YaHei).
+- When a page-scoped `<style>` block is added to an English service page, copy the identical block to its CN counterpart.
+- When content or structure changes in any English page, apply the equivalent change (translated) to the matching CN page in the same commit.
 
 ## Key Business Facts (for content accuracy)
 
