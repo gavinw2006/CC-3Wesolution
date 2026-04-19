@@ -553,7 +553,7 @@ footer {
   color: #f5f5f7;
   margin-bottom: 14px;
 }
-.footer-brand .logo span { color: #34aadc; }
+.footer-brand .logo span { color: var(--blue); }
 
 .footer-brand p {
   font-size: 13px;
