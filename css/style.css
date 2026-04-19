@@ -125,6 +125,16 @@ nav {
 }
 .nav-dropdown:hover .dropdown-menu { display: grid; }
 
+/* Bridge the gap between the nav link and dropdown so hover isn't lost while moving the mouse down */
+.nav-dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  right: -20px;
+  height: 16px;
+}
+
 .dropdown-menu a {
   display: flex;
   align-items: center;
