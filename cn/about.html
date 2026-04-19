@@ -6,6 +6,92 @@
   <title>关于我们 – 3WeSolution</title>
   <meta name="description" content="了解3WeSolution——成立于墨尔本，拥有15年以上网络服务与数字风险防护专业经验。"/>
   <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    .timeline {
+      position: relative;
+      max-width: 720px;
+      margin: 64px auto 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0; bottom: 0;
+      width: 1px;
+      background: var(--border);
+      transform: translateX(-50%);
+    }
+    .tl-item {
+      display: grid;
+      grid-template-columns: 1fr 48px 1fr;
+      gap: 0;
+      margin-bottom: 48px;
+      align-items: start;
+    }
+    .tl-item:nth-child(even) .tl-content { grid-column: 3; }
+    .tl-item:nth-child(even) .tl-year    { grid-column: 2; }
+    .tl-item:nth-child(even) .tl-empty   { grid-column: 1; }
+    .tl-item:nth-child(odd)  .tl-content { grid-column: 1; text-align: right; }
+    .tl-item:nth-child(odd)  .tl-year    { grid-column: 2; }
+    .tl-item:nth-child(odd)  .tl-empty   { grid-column: 3; }
+    .tl-year {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 4px;
+      position: relative;
+      z-index: 1;
+    }
+    .tl-dot {
+      width: 14px; height: 14px;
+      background: var(--blue);
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 1px var(--blue);
+    }
+    .tl-yr-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--blue);
+      letter-spacing: .05em;
+    }
+    .tl-content { padding: 0 24px; }
+    .tl-content h4 { font-size: 16px; font-weight: 600; margin-bottom: 5px; letter-spacing: -.2px; }
+    .tl-content p  { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
+    .partner-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      margin-top: 48px;
+    }
+    .partner-pill {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 28px;
+      background: var(--bg-alt);
+      border-radius: 100px;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text);
+    }
+    .partner-pill span { font-size: 22px; }
+
+    @media(max-width:640px){
+      .timeline::before { left: 20px; }
+      .tl-item { grid-template-columns: 40px 1fr; }
+      .tl-item:nth-child(odd)  .tl-content,
+      .tl-item:nth-child(even) .tl-content { grid-column: 2; text-align: left; }
+      .tl-item:nth-child(odd)  .tl-year,
+      .tl-item:nth-child(even) .tl-year    { grid-column: 1; }
+      .tl-empty { display: none; }
+      .tl-content { padding: 0 0 0 16px; }
+    }
+  </style>
 </head>
 <body class="cn">
 
@@ -99,13 +185,55 @@
       <h2 class="section-title">15年里程碑</h2>
       <p class="section-subtitle">从两人创业咨询公司，成长为覆盖亚太及全球的全方位数字服务企业。</p>
     </div>
-    <div class="service-detail-features" style="margin-top:48px">
-      <div class="detail-card"><div class="icon">🏠</div><h3>2009 — 创立于墨尔本，澳大利亚</h3><p>3WeSolution以精品网站设计与托管咨询公司起步，服务澳大利亚及亚太中小企业。</p></div>
-      <div class="detail-card"><div class="icon">📧</div><h3>2012 — 拓展域名与邮箱服务</h3><p>将托管服务组合扩展至域名注册、DNS管理及专业邮箱托管。</p></div>
-      <div class="detail-card"><div class="icon">🛡️</div><h3>2015 — 数字风险业务启动</h3><p>响应客户对品牌保护的迫切需求，组建专属网络威胁情报团队。</p></div>
-      <div class="detail-card"><div class="icon">🌏</div><h3>2018 — 区域扩张</h3><p>在马来西亚、台湾开设交付中心，服务快速增长的亚太客户群。</p></div>
-      <div class="detail-card"><div class="icon">🤖</div><h3>2021 — Cyberoo.ai战略合作</h3><p>与Cyberoo.ai建立五年战略合作，将AI驱动的诈骗检测平台整合至数字风险防护业务。</p></div>
-      <div class="detail-card"><div class="icon">🚀</div><h3>2022 — AI服务全面升级</h3><p>将AI深度融入网站设计、威胁检测与SEO工作流，大幅提升交付速度与质量。</p></div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-content">
+          <h4>创立于墨尔本，澳大利亚</h4>
+          <p>3WeSolution以精品网站设计与托管咨询公司起步，服务澳大利亚及亚太中小企业。</p>
+        </div>
+        <div class="tl-year"><div class="tl-dot"></div><div class="tl-yr-label">2009</div></div>
+        <div class="tl-empty"></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-empty"></div>
+        <div class="tl-year"><div class="tl-dot"></div><div class="tl-yr-label">2012</div></div>
+        <div class="tl-content">
+          <h4>拓展域名与邮箱服务</h4>
+          <p>将托管服务组合扩展至域名注册、DNS管理及专业邮箱托管。</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-content">
+          <h4>数字风险业务启动</h4>
+          <p>响应客户对品牌保护的迫切需求，组建专属网络威胁情报团队。</p>
+        </div>
+        <div class="tl-year"><div class="tl-dot"></div><div class="tl-yr-label">2015</div></div>
+        <div class="tl-empty"></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-empty"></div>
+        <div class="tl-year"><div class="tl-dot"></div><div class="tl-yr-label">2018</div></div>
+        <div class="tl-content">
+          <h4>区域扩张</h4>
+          <p>在中国大陆、马来西亚、台湾开设交付中心，服务快速增长的亚太客户群。</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-content">
+          <h4>AI服务全面升级</h4>
+          <p>将AI深度融入网站设计、威胁检测与SEO工作流，大幅提升交付速度与质量。</p>
+        </div>
+        <div class="tl-year"><div class="tl-dot"></div><div class="tl-yr-label">2022</div></div>
+        <div class="tl-empty"></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-empty"></div>
+        <div class="tl-year"><div class="tl-dot"></div><div class="tl-yr-label">2021</div></div>
+        <div class="tl-content">
+          <h4>Cyberoo.ai 战略合作</h4>
+          <p>与Cyberoo.ai建立五年战略合作，将AI驱动的诈骗检测平台整合至数字风险防护业务。</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -114,7 +242,7 @@
   <div class="container">
     <div class="text-center">
       <span class="section-label">技术伙伴</span>
-      <h2 class="section-title">顶级合作伙伴背书</h2>
+      <h2 class="section-title">顶级技术合作伙伴</h2>
       <p class="section-subtitle">我们与全球顶尖技术供应商合作，为每位客户交付最优解决方案。</p>
     </div>
     <div style="display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap;margin-top:48px">
