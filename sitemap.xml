@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- English root pages -->
+  <url>
+    <loc>https://3wesolution.com/index.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://3wesolution.com/about.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://3wesolution.com/contact.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- English service pages -->
+  <url>
+    <loc>https://3wesolution.com/services/website-design.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://3wesolution.com/services/web-hosting.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://3wesolution.com/services/certificate.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://3wesolution.com/services/domain.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://3wesolution.com/services/email.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://3wesolution.com/services/social-media.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://3wesolution.com/services/digitalization.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://3wesolution.com/services/digital-risk.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Chinese root pages -->
+  <url>
+    <loc>https://3wesolution.com/cn/index.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://3wesolution.com/cn/about.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://3wesolution.com/cn/contact.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Chinese service pages -->
+  <url>
+    <loc>https://3wesolution.com/cn/services/website-design.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://3wesolution.com/cn/services/web-hosting.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://3wesolution.com/cn/services/certificate.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://3wesolution.com/cn/services/domain.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://3wesolution.com/cn/services/email.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://3wesolution.com/cn/services/social-media.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://3wesolution.com/cn/services/digitalization.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://3wesolution.com/cn/services/digital-risk.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
