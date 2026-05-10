@@ -57,18 +57,40 @@ open services/digital-risk.html        # any service page
 - Animated counters: `.num[data-count]` with `data-suffix` attribute
 - Contact form submit handler (looks for `#contact-form`)
 
+## Git & Push Rules
+
+- Remote: `https://github.com/gavinw2006/CC-3Wesolution` (branch: `main`)
+- Local git identity: `user.name = 3WE`, `user.email = 3w2026@gmail.com` (set in repo, not global)
+- Push auth: `gh` CLI token — run `gh auth setup-git` if push fails
+- After every change, commit and ask the user for permission before pushing
+
+## Root SEO Files
+
+`robots.txt` and `sitemap.xml` exist at the repo root. Do not delete or move them.
+
 ## Nav & Branding Rules
 
 Every page nav follows this exact structure — **do not diverge**:
 ```html
 <a class="nav-logo" href="[../]index.html">3W<span>eSolution</span></a>
 ```
-- Root pages (`index.html`, `about.html`, `contact.html`): `href="index.html"`
-- Service pages (`services/*.html`): `href="../index.html"`, assets at `../css/` and `../js/`
+
+| Page location | CSS/JS path | Nav logo href |
+| --- | --- | --- |
+| Root EN (`*.html`) | `css/style.css` | `index.html` |
+| Service EN (`services/*.html`) | `../css/style.css` | `../index.html` |
+| Root CN (`cn/*.html`) | `../css/style.css` | `../index.html` |
+| Service CN (`cn/services/*.html`) | `../../css/style.css` | `../../index.html` |
+
 - Brand colours: **"3W"** = `#1d1d1f` (inherits), **"eSolution"** = `#0071e3` (via `<span>`)
 - Footer copyright year: **2026**
 - Business hours timezone: **AEST (UTC+10)**
-- double check all the logos and icons, as well as the contents are consistent with the brand guidelines provided by the client. Ensure that the colors, fonts, and overall design align with the client's branding to maintain a cohesive and professional appearance across the website.
+- After any edit, verify: logo text split (`3W` + `eSolution`), span colour (`var(--blue)`), and footer brand match nav.
+
+### Nav Dropdown Hover Bridge
+
+The Services dropdown uses a CSS `::after` pseudo-element on `.nav-dropdown` to bridge the 12 px gap between the trigger link and the dropdown panel, keeping hover state alive as the mouse moves down. Do not remove this — without it the submenu closes before the cursor reaches it.
+
 ## Page-Level Conventions
 
 - Service pages load `../css/style.css` and `../js/main.js`
@@ -84,7 +106,7 @@ Every page nav follows this exact structure — **do not diverge**:
 - The only permitted CN-specific CSS is `body.cn { font-family: ... }` in `style.css` for the Chinese font stack (PingFang SC / Hiragino Sans GB / Microsoft YaHei).
 - When a page-scoped `<style>` block is added to an English service page, copy the identical block to its CN counterpart.
 - When content or structure changes in any English page, apply the equivalent change (translated) to the matching CN page in the same commit.
-- double check all the logos and icons, as well as the contents are consistent with the brand guidelines provided by the client. Ensure that the colors, fonts, contents and overall design are exactly same in Chinese version website and align with the client's branding to maintain a cohesive and professional appearance across both language versions of the website.
+- After any bilingual change, verify logos, colours, fonts, and layout are identical across both versions.
 
 ## Key Business Facts (for content accuracy)
 
