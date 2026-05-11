@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI应用安全 – 3WeSolution</title>
+  <meta name="description" content="抵御提示词注入、模型滥用、数据泄露与对抗性攻击，全面保障您的AI应用安全——LLM安全评估、红队测试与护栏实施。"/>
+  <link rel="stylesheet" href="../../css/style.css"/>
+  <style>
+    .threat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+      gap: 2px;
+      background: #e8e8ed;
+      border: 1px solid #e8e8ed;
+      border-radius: 24px;
+      overflow: hidden;
+      margin-top: 56px;
+    }
+    .threat-card {
+      background: #fff;
+      padding: 36px 32px;
+      transition: background .25s ease;
+    }
+    .threat-card:hover { background: #f5f5f7; }
+    .threat-card .threat-icon { font-size: 28px; margin-bottom: 16px; }
+    .threat-card h3 { font-size: 17px; font-weight: 600; margin-bottom: 9px; letter-spacing: -.2px; }
+    .threat-card p { font-size: 14px; color: #6e6e73; margin: 0; line-height: 1.65; }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2px;
+      background: #e8e8ed;
+      border: 1px solid #e8e8ed;
+      border-radius: 24px;
+      overflow: hidden;
+      margin-top: 56px;
+    }
+    .process-step {
+      background: #fff;
+      padding: 40px 32px;
+      transition: background .25s ease;
+    }
+    .process-step:hover { background: #f5f5f7; }
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px; height: 40px;
+      background: #0071e3;
+      border-radius: 50%;
+      font-weight: 600;
+      font-size: 15px;
+      color: #fff;
+      margin-bottom: 18px;
+    }
+    .process-step h3 { font-size: 17px; font-weight: 600; margin-bottom: 10px; letter-spacing: -.2px; }
+    .process-step p { font-size: 14px; color: #6e6e73; margin: 0; line-height: 1.65; }
+  </style>
+</head>
+<body class="cn">
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="../../index.html">3W<span>eSolution</span></a>
+    <ul class="nav-menu">
+      <li><a href="../../index.html">首页</a></li>
+      <li class="nav-dropdown"><a href="#" class="active">服务</a>
+        <div class="dropdown-menu">
+          <a href="website-design.html"><span class="icon">🎨</span>网站设计</a>
+          <a href="web-hosting.html"><span class="icon">☁️</span>网站托管与运维</a>
+          <a href="certificate.html"><span class="icon">🔒</span>证书管理</a>
+          <a href="domain.html"><span class="icon">🌐</span>域名管理</a>
+          <a href="email.html"><span class="icon">✉️</span>邮箱管理</a>
+          <a href="social-media.html"><span class="icon">📱</span>社交媒体管理</a>
+          <a href="digitalization.html"><span class="icon">⚡</span>数字化转型</a>
+          <a href="digital-risk.html"><span class="icon">🛡️</span>数字风险防护</a>
+          <a href="ai-workflow-automation.html"><span class="icon">🤖</span>AI工作流自动化</a>
+          <a href="secure-ai-adoption.html"><span class="icon">🔐</span>安全AI采纳</a>
+          <a href="agentic-ai-solutions.html"><span class="icon">🧠</span>智能体AI解决方案</a>
+          <a href="ai-application-security.html"><span class="icon">🛡️</span>AI应用安全</a>
+        </div>
+      </li>
+      <li><a href="../../about.html">关于我们</a></li>
+      <li><a href="../../contact.html">联系我们</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a class="lang-switch" href="../../services/ai-application-security.html">
+        <span>🌐</span>EN | <span class="active-lang">中文</span>
+      </a>
+      <button class="nav-toggle" aria-label="菜单"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="../../index.html">首页</a> › <a href="#">服务</a> › AI应用安全</div>
+    <span class="section-label">AI应用安全</span>
+    <h1>在攻击者找到漏洞之前，<br>加固您的AI应用。</h1>
+    <p>AI驱动的应用引入了一类传统安全工具无法检测的全新漏洞。我们评估、加固并持续监控您的AI系统，抵御提示词注入、模型滥用、数据泄露与对抗性攻击。</p>
+  </div>
+</section>
+
+<!-- ── 威胁覆盖 ── -->
+<section>
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">威胁覆盖</span>
+      <h2 class="section-title">我们防御的AI专属威胁</h2>
+      <p class="section-subtitle">OWASP LLM Top 10及更多——针对AI应用的每一种攻击向量，系统性加以应对。</p>
+    </div>
+
+    <div class="threat-grid">
+      <div class="threat-card">
+        <div class="threat-icon">💉</div>
+        <h3>提示词注入</h3>
+        <p>攻击者在用户输入或检索内容中嵌入恶意指令，覆盖您的系统提示，使您的AI产生未经授权的行为。</p>
+      </div>
+      <div class="threat-card">
+        <div class="threat-icon">🔓</div>
+        <h3>不安全的输出处理</h3>
+        <p>AI生成的内容未经消毒直接传递至下游系统——数据库、浏览器、API——使攻击者得以通过LLM层触发XSS、SQLi及命令注入。</p>
+      </div>
+      <div class="threat-card">
+        <div class="threat-icon">💾</div>
+        <h3>训练数据投毒</h3>
+        <p>操控微调数据集，在您的定制AI模型抵达生产环境之前，植入后门、偏见或恶意行为。</p>
+      </div>
+      <div class="threat-card">
+        <div class="threat-icon">🔍</div>
+        <h3>模型与数据泄露</h3>
+        <p>通过精心设计的查询，诱使模型吐露敏感训练数据、系统提示或专有业务逻辑。</p>
+      </div>
+      <div class="threat-card">
+        <div class="threat-icon">⚡</div>
+        <h3>过度授权滥用</h3>
+        <p>滥用被赋予广泛工具权限的AI智能体——诱使其删除数据、发送未授权通信或触发意外的API操作。</p>
+      </div>
+      <div class="threat-card">
+        <div class="threat-icon">🎭</div>
+        <h3>对抗性输入攻击</h3>
+        <p>精心构造的输入，旨在导致分类错误、绕过内容过滤器或降低模型性能——破坏您AI功能的可靠性。</p>
+      </div>
+      <div class="threat-card">
+        <div class="threat-icon">🧩</div>
+        <h3>供应链风险</h3>
+        <p>评估您的AI应用所依赖的第三方模型、插件、API与数据集中的安全漏洞——覆盖完整的AI依赖链。</p>
+      </div>
+      <div class="threat-card">
+        <div class="threat-icon">🚫</div>
+        <h3>拒绝服务与滥用</h3>
+        <p>高消耗提示词攻击、资源耗尽与对AI端点的系统性滥用——通过速率限制、异常检测与流量控制加以防御。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 我们的服务 ── -->
+<section class="bg-secondary">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">我们的服务</span>
+      <h2 class="section-title">从安全评估到加固部署</h2>
+      <p class="section-subtitle">我们贯穿AI安全全生命周期——发现漏洞、落实管控、维持持续防御。</p>
+    </div>
+
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">1</div>
+        <h3>LLM安全评估</h3>
+        <p>对您的AI应用攻击面进行结构化审查——涵盖架构、提示词设计、数据流、工具集成与输出处理——并映射至OWASP LLM Top 10。</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">2</div>
+        <h3>红队测试与对抗性评估</h3>
+        <p>我们的专家使用真实攻击技术尝试破解您的AI系统——提示词注入链、越狱尝试、数据提取探针与智能体操控场景。</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">3</div>
+        <h3>护栏设计与实施</h3>
+        <p>设计并部署输入/输出过滤器、内容分类器、语义护栏与行为监控器——在不降低合法功能体验的前提下拦截恶意使用。</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">4</div>
+        <h3>持续监控与定期审查</h3>
+        <p>持续记录并分析AI交互日志，检测新型攻击模式，监控行为漂移，并在生产环境中发现异常时触发告警。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 为何选择3WeSolution ── -->
+<section>
+  <div class="container">
+    <div class="two-col">
+      <div class="col-visual">🛡️</div>
+      <div class="col-content">
+        <span class="section-label">为何选择3WeSolution</span>
+        <h2>安全经验与AI专业深度融合</h2>
+        <p>AI应用安全需要同时理解两个维度——针对AI系统的攻击技术，以及产生可利用漏洞的工程决策。我们的团队将15年安全实践与深度AI开发实战经验相结合，覆盖攻防两端。</p>
+        <ul class="check-list">
+          <li>扎根OWASP LLM Top 10与前沿AI威胁研究</li>
+          <li>真实红队测试——而非仅依赖自动化扫描</li>
+          <li>落地护栏实施，而非停留于顾问报告</li>
+          <li>具备RAG流水线与智能体系统安全加固经验</li>
+          <li>与ISO/IEC 42001及NIST AI RMF安全控制措施对齐</li>
+        </ul>
+        <a class="btn-primary" href="../../contact.html">申请安全评估 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section">
+  <div class="container">
+    <h2>您的AI应用真的像您想象的那样安全吗？</h2>
+    <p>大多数AI安全漏洞是被攻击者发现的，而非内部团队。在您的应用成为目标之前，通过专业LLM安全评估提前占据主动。</p>
+    <a class="btn-white" href="../../contact.html">预约AI安全评估 →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="border:none;padding:32px 0">
+      <p>© 2026 3WeSolution. 版权所有。 | <a href="mailto:info@3wesolution.com" style="color:var(--text-muted)">info@3wesolution.com</a></p>
+      <div class="footer-bottom-links">
+        <a href="../../index.html">首页</a>
+        <a href="../../contact.html">联系我们</a>
+        <a href="../../services/ai-application-security.html">English</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../js/main.js"></script>
+</body>
+</html>
