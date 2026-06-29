@@ -76,7 +76,7 @@ CC-3Wesolution/
 ├── about.html              # Company story, values, timeline, team
 ├── contact.html            # Enquiry form + FAQ accordion
 │
-├── services/               # One page per service offering
+├── services/               # 12 English service pages
 │   ├── website-design.html
 │   ├── web-hosting.html
 │   ├── certificate.html
@@ -84,33 +84,52 @@ CC-3Wesolution/
 │   ├── email.html
 │   ├── social-media.html
 │   ├── digitalization.html
-│   └── digital-risk.html   # DRP — largest page, page-scoped styles
+│   ├── digital-risk.html         # DRP — largest page, page-scoped styles
+│   ├── ai-workflow-automation.html
+│   ├── secure-ai-adoption.html
+│   ├── agentic-ai-solutions.html
+│   ├── ai-application-security.html
+│   ├── ai-agents.html            # AI Agent Development
+│   ├── llm-solutions.html        # LLM Integration & Solutions
+│   ├── ai-consulting.html        # AI Strategy & Consulting
+│   └── ai-packages.html          # AI Transformation Packages (3-tier pricing)
+│
+├── cn/                     # Full Chinese mirror — 19 pages
+│   ├── index.html
+│   ├── about.html
+│   ├── contact.html
+│   └── services/           # 16 CN service pages (mirrors services/ exactly)
 │
 ├── css/
 │   └── style.css           # Single global stylesheet (~1,100 lines)
 │
 ├── js/
-│   └── main.js             # Single global script (~107 lines)
+│   └── main.js             # Single global script
 │
 ├── images/
 │   ├── logo.svg            # Full horizontal logo (icon + wordmark)
 │   └── logo-mark.svg       # Icon-only mark (three-W symbol)
 │
+├── robots.txt              # Search engine crawl rules
+├── sitemap.xml             # XML sitemap for SEO
 ├── CLAUDE.md               # AI coding assistant guidance
 └── README.md               # This file
 ```
 
 ### Path Convention
-| Page type | CSS/JS path | Back-link |
+| Page type | CSS/JS path | Nav logo href |
 |---|---|---|
-| Root pages (`index`, `about`, `contact`) | `css/style.css` | — |
-| Service pages (`services/*.html`) | `../css/style.css` | `../index.html` |
+| Root EN (`*.html`) | `css/style.css` | `index.html` |
+| Service EN (`services/*.html`) | `../css/style.css` | `../index.html` |
+| Root CN (`cn/*.html`) | `../css/style.css` | `../index.html` |
+| Service CN (`cn/services/*.html`) | `../../css/style.css` | `../../index.html` |
 
 ### Shared Components (hand-coded, no framework)
 Every page includes the same:
-- **Frosted-glass nav** — fixed, `backdrop-filter: blur(20px)`, services dropdown
-- **Language switcher** — EN / 中文 (Chinese version directory `cn/` reserved, not yet built)
+- **Frosted-glass nav** — fixed, `backdrop-filter: blur(20px)`, services dropdown with all 16 services
+- **Language switcher** — EN / 中文, links to the matching page in the other language
 - **Footer** — dark (`#1d1d1f`), four-column grid with services, company, contact links
+- **Tidio AI chat widget** — floating chat bubble (bottom-right) powered by Lyro AI
 
 ---
 
@@ -144,9 +163,9 @@ Loaded by every page, provides:
 
 | Page | Key Sections |
 |---|---|
-| **index.html** | Hero, Stats bar (4 counters), Services grid (8 cards), AI feature section, Security feature section, Testimonials, CTA |
+| **index.html** | Hero (AI Transformation Partner positioning), Stats bar (4 counters), Services grid (16 cards), AI services highlight, Testimonials, CTA |
 | **about.html** | Hero, Mission (two-col), Stats bar, Core Values (3×2 grid), Timeline (2009–2021), Team, Partners, CTA |
-| **contact.html** | Hero, Contact info card + Enquiry form (with service checkboxes, budget selector), FAQ accordion, CTA |
+| **contact.html** | Hero, Contact info card + Enquiry form (16 service chips, budget selector), FAQ accordion, CTA |
 | **website-design.html** | Hero, 8-feature grid, Process timeline, Pricing (3 tiers), CTA |
 | **web-hosting.html** | Hero, Features, Pricing (3 tiers), CTA |
 | **certificate.html** | Hero, Features, CTA |
@@ -155,6 +174,16 @@ Loaded by every page, provides:
 | **social-media.html** | Hero, Features, CTA |
 | **digitalization.html** | Hero, Features, CTA |
 | **digital-risk.html** | Hero, Cyberoo.ai partner banner, Track-record stats, 8 threat-type cards, 4-phase methodology, Why 3WE section, Pricing (3 tiers), CTA |
+| **ai-workflow-automation.html** | Hero, Features, CTA |
+| **secure-ai-adoption.html** | Hero, Features, CTA |
+| **agentic-ai-solutions.html** | Hero, Features, CTA |
+| **ai-application-security.html** | Hero, Features, CTA |
+| **ai-agents.html** | Hero, Features, Business benefits, CTA |
+| **llm-solutions.html** | Hero, Features, Integration use cases, CTA |
+| **ai-consulting.html** | Hero, Features, AI readiness assessment, CTA |
+| **ai-packages.html** | Hero, 3-tier pricing (AI Starter $2,500/mo · AI Business $6,500/mo · AI Enterprise custom), CTA |
+
+All 19 pages have a full Chinese mirror under `cn/`.
 
 ---
 
@@ -164,7 +193,13 @@ Loaded by every page, provides:
 The most content-rich service page. Uses a **page-scoped `<style>` block** for components not needed globally: `.partner-banner`, `.threat-grid`, `.threat-card`, `.process-steps`, `.experience-bar`. Highlights the 5-year Cyberoo.ai partnership with explicit stats (8,400+ takedowns, 350+ brands, <4h response).
 
 ### Contact Form → Email
-The contact form (`contact.html`) is a **purely static mailto solution** — no server, no third-party form service. On submit, JavaScript constructs a pre-filled `mailto:` URL from all form fields (name, email, company, selected services, budget, message) and opens the visitor's default email client addressed to `info@3wesolution.com`.
+The contact form (`contact.html`) is a **purely static mailto solution** — no server, no third-party form service. On submit, JavaScript constructs a pre-filled `mailto:` URL from all form fields (name, email, company, selected services, budget, message) and opens the visitor's default email client addressed to `info@3wesolution.com`. The form offers 16 service chips (interactive checkbox pills) covering the full service portfolio.
+
+### Tidio AI Chat Widget
+Every page loads the Tidio widget (`//code.tidio.co/ytiepywz4oqgyqwiyujissnpgxysed71.js`) just before `</body>`. The widget provides:
+- **Lyro AI** — 50 AI-answered conversations/month on the free plan
+- **Live chat fallback** — escalates to a human agent when needed
+- Configured and managed from the Tidio dashboard (tidio.com)
 
 ### Animated Counters
 The homepage stats bar uses `data-count` / `data-suffix` HTML attributes driven by `main.js`. Example:
@@ -260,6 +295,49 @@ Comprehensive audit of all CN pages against EN. Four pages had significant missi
 - **`cn/contact.html`** — split single name field into 姓/名 matching EN fname/lname; replaced `<select>` service dropdown with 8 interactive chip checkboxes; added `.service-select-grid` / `.service-chip` CSS; updated form JS to collect multiple selections
 - **`cn/services/website-design.html`** — added 3-tier pricing section (基础版 $999 / 商业版 $2,499 / 企业版 Custom)
 - **`cn/services/web-hosting.html`** — expanded features from 6 to 8 cards matching EN; added 3-tier pricing section (基础版 $29/mo / 专业版 $79/mo / 企业版 Custom)
+
+---
+
+### 2026-05-09 — Contact details and SEO updates (`b5386e1`, `8f2b1ce`, `8f02652`, `1fb39c8`)
+
+- Updated WeChat ID to `wwwesolution` on all contact pages (EN + CN)
+- Updated footer phone to `+61 493 016 638` on home pages
+- Removed China flag emoji from language switcher (rendering inconsistency)
+- Added SEO foundation: `sitemap.xml`, `robots.txt`, and JSON-LD structured data on homepage
+
+### 2026-05-10 — CLAUDE.md improvements (`a7e2f10`)
+
+Documented the nav dropdown hover bridge (`::after` pseudo-element), SEO files location, and git identity rules in `CLAUDE.md` to guide future edits.
+
+### 2026-05-12 — AI services phase 1, testimonials, and footer sync (`cceffc6`, `3e74198`, `fa91394`)
+
+- **4 new service pages (EN + CN)**: AI Workflow Automation, Secure AI Adoption, Agentic AI Solutions, AI Application Security
+- Added Customer Testimonials and Client Stories sections to homepage (EN + CN)
+- Updated contact page with additional context and copy improvements
+- Synced footer services list across all pages to include the 4 new AI services
+
+### 2026-06-29 — AI services expansion, contact form update, Tidio chat (`85609d6`)
+
+Major update repositioning 3WeSolution as an AI Transformation Partner.
+
+**New pages (EN + CN, 8 pages):**
+- `services/ai-agents.html` — AI Agent Development
+- `services/llm-solutions.html` — LLM Integration & Solutions
+- `services/ai-consulting.html` — AI Strategy & Consulting
+- `services/ai-packages.html` — AI Transformation Packages (3-tier pricing)
+
+**Homepage updated:**
+- Title, meta, hero badge, headline, and subtext repositioned to "AI Transformation Partner"
+- 4 new AI service cards added to the services grid
+- Mission / "Our Edge" section rewritten to reflect AI transformation focus
+- Footer brand description updated
+
+**Contact form:**
+- 4 new service chips added to both EN and CN forms: AI Agent Development, LLM Integration & Solutions, AI Strategy & Consulting, AI Transformation Packages
+
+**Tidio AI chat:**
+- Widget installed on all 38 pages via single `<script>` tag before `</body>`
+- Provides Lyro AI chatbot and live chat fallback
 
 ---
 
