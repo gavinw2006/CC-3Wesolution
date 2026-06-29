@@ -164,7 +164,7 @@ Loaded by every page, provides:
 | Page | Key Sections |
 |---|---|
 | **index.html** | Hero (AI Transformation Partner positioning), Stats bar (4 counters), Services grid (16 cards), AI services highlight, Testimonials, CTA |
-| **about.html** | Hero, Mission (two-col), Stats bar, Core Values (3×2 grid), Timeline (2009–2021), Team, Partners, CTA |
+| **about.html** | Hero, Mission (two-col), Stats bar, Core Values (3×2 grid), Timeline (2009–2026, 10 entries), Team, Partners, CTA |
 | **contact.html** | Hero, Contact info card + Enquiry form (16 service chips, budget selector), FAQ accordion, CTA |
 | **website-design.html** | Hero, 8-feature grid, Process timeline, Pricing (3 tiers), CTA |
 | **web-hosting.html** | Hero, Features, Pricing (3 tiers), CTA |
@@ -338,6 +338,17 @@ Major update repositioning 3WeSolution as an AI Transformation Partner.
 **Tidio AI chat:**
 - Widget installed on all 38 pages via single `<script>` tag before `</body>`
 - Provides Lyro AI chatbot and live chat fallback
+
+### 2026-06-29 — Timeline updates: 17 years, corrected order, 2023–2026 entries (`ac9eed9`, `252e0f3`)
+
+- Heading updated: "15 Years of Milestones" → "17 Years of Milestones" (EN + CN)
+- Subtitle updated to reflect AI transformation firm positioning
+- Fixed chronological order: 2021 (Cyberoo.ai) now correctly precedes 2022 (AI launch)
+- Added four new milestone entries to both EN and CN about pages:
+  - **2023** — 350+ Clients Milestone (8,400+ threat takedowns)
+  - **2024** — AI Strategy & Consulting launch
+  - **2025** — AI Agent & LLM Practice launch
+  - **2026** — AI Transformation Partner repositioning
 
 ---
 
