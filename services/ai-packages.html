@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Transformation Packages – 3WeSolution</title>
+  <meta name="description" content="Three AI transformation packages designed for every stage of growth — AI Starter, AI Business, and AI Enterprise. Fixed-scope bundles with clear ROI outcomes."/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 56px;
+    }
+    .pricing-card {
+      background: var(--bg-alt);
+      border-radius: var(--r-xl);
+      padding: 40px 36px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .pricing-card.featured {
+      background: #1d1d1f;
+      color: #f5f5f7;
+    }
+    .pricing-card.featured h3,
+    .pricing-card.featured .price-amount,
+    .pricing-card.featured .price-period,
+    .pricing-card.featured p { color: #f5f5f7; }
+    .pricing-card.featured .price-desc,
+    .pricing-card.featured li { color: #a1a1a6; }
+    .pricing-badge {
+      display: inline-block;
+      background: #0071e3;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+    .pricing-tier {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #0071e3;
+      margin-bottom: 10px;
+    }
+    .pricing-card.featured .pricing-tier { color: #64b5f6; }
+    .pricing-card h3 { font-size: 26px; font-weight: 700; letter-spacing: -.5px; margin-bottom: 8px; }
+    .pricing-card > p { font-size: 14px; color: #6e6e73; margin-bottom: 28px; line-height: 1.6; }
+    .price-row { margin-bottom: 28px; }
+    .price-amount { font-size: 40px; font-weight: 700; letter-spacing: -1.5px; }
+    .price-period { font-size: 16px; font-weight: 400; color: #6e6e73; }
+    .price-desc { font-size: 13px; color: #6e6e73; margin-top: 4px; }
+    .feature-list { list-style: none; padding: 0; margin: 0 0 32px; flex: 1; }
+    .feature-list li {
+      font-size: 14px;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(0,0,0,.06);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.5;
+    }
+    .pricing-card.featured .feature-list li { border-bottom-color: rgba(255,255,255,.08); }
+    .feature-list li::before {
+      content: "✓";
+      color: #0071e3;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .pricing-card.featured .feature-list li::before { color: #64b5f6; }
+    .pkg-btn {
+      display: block;
+      text-align: center;
+      padding: 14px 24px;
+      border-radius: 100px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity .2s;
+    }
+    .pkg-btn:hover { opacity: .85; }
+    .pkg-btn-primary { background: #0071e3; color: #fff; }
+    .pkg-btn-dark { background: #fff; color: #1d1d1f; }
+    .pkg-btn-outline { background: transparent; color: #1d1d1f; border: 1.5px solid #d2d2d7; }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 56px;
+      font-size: 14px;
+    }
+    .compare-table th {
+      padding: 16px 20px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--border);
+    }
+    .compare-table th:not(:first-child) { text-align: center; }
+    .compare-table td {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border-light);
+      vertical-align: middle;
+    }
+    .compare-table td:not(:first-child) { text-align: center; }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table td:first-child { font-weight: 500; }
+    .compare-table .check { color: #0071e3; font-size: 18px; font-weight: 700; }
+    .compare-table .dash { color: #d2d2d7; }
+
+    .outcome-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2px;
+      background: #e8e8ed;
+      border: 1px solid #e8e8ed;
+      border-radius: 24px;
+      overflow: hidden;
+      margin-top: 56px;
+      text-align: center;
+    }
+    .outcome-card {
+      background: #fff;
+      padding: 40px 24px;
+    }
+    .outcome-card .out-num { font-size: 40px; font-weight: 700; color: #0071e3; letter-spacing: -1px; margin-bottom: 8px; }
+    .outcome-card h4 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+    .outcome-card p { font-size: 13px; color: #6e6e73; margin: 0; line-height: 1.5; }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="../index.html">3W<span>eSolution</span></a>
+    <ul class="nav-menu">
+      <li><a href="../index.html">Home</a></li>
+      <li class="nav-dropdown"><a href="#" class="active">Services</a>
+        <div class="dropdown-menu">
+          <a href="website-design.html"><span class="icon">🎨</span>Website Design</a>
+          <a href="web-hosting.html"><span class="icon">☁️</span>Web Hosting & Ops</a>
+          <a href="certificate.html"><span class="icon">🔒</span>Certificate Mgmt</a>
+          <a href="domain.html"><span class="icon">🌐</span>Domain Mgmt</a>
+          <a href="email.html"><span class="icon">✉️</span>Email Mgmt</a>
+          <a href="social-media.html"><span class="icon">📱</span>Social Media Mgmt</a>
+          <a href="digitalization.html"><span class="icon">⚡</span>Digitalization</a>
+          <a href="digital-risk.html"><span class="icon">🛡️</span>Digital Risk Protection</a>
+          <a href="ai-workflow-automation.html"><span class="icon">🤖</span>AI Workflow Automation</a>
+          <a href="secure-ai-adoption.html"><span class="icon">🔐</span>Secure AI Adoption</a>
+          <a href="agentic-ai-solutions.html"><span class="icon">🧠</span>Agentic AI Solutions</a>
+          <a href="ai-application-security.html"><span class="icon">🛡️</span>AI Application Security</a>
+          <a href="ai-agents.html"><span class="icon">🦾</span>AI Agent Development</a>
+          <a href="llm-solutions.html"><span class="icon">💡</span>LLM Integration & Solutions</a>
+          <a href="ai-consulting.html"><span class="icon">🎯</span>AI Strategy & Consulting</a>
+          <a href="ai-packages.html"><span class="icon">📦</span>AI Transformation Packages</a>
+        </div>
+      </li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a class="lang-switch" href="../cn/services/ai-packages.html"><span>🌐</span><span class="active-lang">EN</span> | 中文</a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="#">Services</a> › AI Transformation Packages</div>
+    <span class="section-label">AI Transformation Packages</span>
+    <h1>The Right AI Package<br>for Your Stage of Growth.</h1>
+    <p>We've packaged our AI expertise into three clear tiers — from a focused first-step deployment for SMBs to a comprehensive enterprise transformation program. Every package is fixed-scope, outcome-focused, and designed to deliver measurable ROI within the first quarter.</p>
+  </div>
+</section>
+
+<!-- ── PRICING ── -->
+<section>
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Our Packages</span>
+      <h2 class="section-title">Three Tiers. Clear Outcomes. Real ROI.</h2>
+      <p class="section-subtitle">All packages include discovery, design, deployment, and a defined support period — so you know exactly what you are getting and when you will see results.</p>
+    </div>
+
+    <div class="pricing-grid">
+
+      <!-- AI Starter -->
+      <div class="pricing-card">
+        <div class="pricing-tier">AI Starter</div>
+        <h3>For Small & Medium Businesses</h3>
+        <p>Your first AI deployment — a single, focused agent or LLM integration designed to solve your most immediate operational pain point and demonstrate measurable value quickly.</p>
+        <div class="price-row">
+          <span class="price-amount">$2,500</span>
+          <span class="price-period">/mo</span>
+          <div class="price-desc">3-month minimum commitment</div>
+        </div>
+        <ul class="feature-list">
+          <li>1 custom AI agent or LLM integration</li>
+          <li>1 business system integration (CRM, helpdesk, or email)</li>
+          <li>3-week deployment timeline</li>
+          <li>Pre-built AI use case templates</li>
+          <li>Basic performance dashboard</li>
+          <li>Email & chat support (business hours)</li>
+          <li>3-month hypercare support period</li>
+          <li>Monthly performance review call</li>
+        </ul>
+        <a href="../contact.html" class="pkg-btn pkg-btn-outline">Get Started →</a>
+      </div>
+
+      <!-- AI Business -->
+      <div class="pricing-card featured">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-tier">AI Business</div>
+        <h3>For Growing Companies</h3>
+        <p>A comprehensive AI deployment that transforms multiple workflows, integrates with your core business systems, and builds the AI capability your team needs to keep growing.</p>
+        <div class="price-row">
+          <span class="price-amount">$6,500</span>
+          <span class="price-period">/mo</span>
+          <div class="price-desc">12-month program, quarterly review</div>
+        </div>
+        <ul class="feature-list">
+          <li>3 custom AI agents (customer, document & data)</li>
+          <li>CRM + ERP integration with LLM intelligence layer</li>
+          <li>Custom model training on your business data</li>
+          <li>AI Strategy workshop & 12-month roadmap</li>
+          <li>Advanced analytics & ROI measurement dashboard</li>
+          <li>Priority support with 4-hour response SLA</li>
+          <li>Dedicated AI project manager</li>
+          <li>Quarterly business review and optimization</li>
+          <li>AI governance policy documentation</li>
+          <li>Team training & adoption program</li>
+        </ul>
+        <a href="../contact.html" class="pkg-btn pkg-btn-dark">Start Your Transformation →</a>
+      </div>
+
+      <!-- AI Enterprise -->
+      <div class="pricing-card">
+        <div class="pricing-tier">AI Enterprise</div>
+        <h3>For Enterprise Organizations</h3>
+        <p>A full AI transformation program — unlimited agents, multi-system integration, a dedicated AI engineering team, and continuous optimization designed to compound your competitive advantage.</p>
+        <div class="price-row">
+          <span class="price-amount">Custom</span>
+          <div class="price-desc">Scoped to your organization's needs</div>
+        </div>
+        <ul class="feature-list">
+          <li>Unlimited AI agents across business functions</li>
+          <li>Multi-system integration (CRM, ERP, HRMS, SCM)</li>
+          <li>Dedicated AI engineer embedded in your team</li>
+          <li>Custom LLM fine-tuning & private model deployment</li>
+          <li>Enterprise AI governance & compliance framework</li>
+          <li>Executive AI strategy consulting & board reporting</li>
+          <li>24/7 priority support with 1-hour response SLA</li>
+          <li>Continuous model monitoring & optimization</li>
+          <li>On-premises or private cloud deployment option</li>
+          <li>Full IP ownership of all developed AI systems</li>
+        </ul>
+        <a href="../contact.html" class="pkg-btn pkg-btn-outline">Request Enterprise Proposal →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── COMPARE ── -->
+<section class="bg-secondary">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Package Comparison</span>
+      <h2 class="section-title">What's Included in Each Package</h2>
+      <p class="section-subtitle">A side-by-side view of every feature across all three AI transformation tiers.</p>
+    </div>
+
+    <div style="overflow-x:auto; margin-top:56px;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>AI Starter</th>
+            <th>AI Business</th>
+            <th>AI Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Custom AI Agents</td>
+            <td>1 agent</td>
+            <td>3 agents</td>
+            <td>Unlimited</td>
+          </tr>
+          <tr>
+            <td>Business System Integrations</td>
+            <td>1 system</td>
+            <td>2 systems</td>
+            <td>Unlimited</td>
+          </tr>
+          <tr>
+            <td>LLM Intelligence Layer</td>
+            <td class="dash">—</td>
+            <td class="check">✓</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Custom Model Training / Fine-Tuning</td>
+            <td class="dash">—</td>
+            <td class="check">✓</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>AI Strategy Workshop & Roadmap</td>
+            <td class="dash">—</td>
+            <td class="check">✓</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>AI Governance Framework</td>
+            <td class="dash">—</td>
+            <td>Documentation</td>
+            <td>Full program</td>
+          </tr>
+          <tr>
+            <td>Dedicated Project Manager</td>
+            <td class="dash">—</td>
+            <td class="check">✓</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Dedicated AI Engineer</td>
+            <td class="dash">—</td>
+            <td class="dash">—</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Support Response SLA</td>
+            <td>Business hours</td>
+            <td>4 hours</td>
+            <td>1 hour / 24/7</td>
+          </tr>
+          <tr>
+            <td>ROI Measurement Dashboard</td>
+            <td>Basic</td>
+            <td>Advanced</td>
+            <td>Custom</td>
+          </tr>
+          <tr>
+            <td>Private / On-Premises Deployment</td>
+            <td class="dash">—</td>
+            <td class="dash">—</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Full IP Ownership</td>
+            <td class="dash">—</td>
+            <td class="dash">—</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Team Training & Adoption Program</td>
+            <td class="dash">—</td>
+            <td class="check">✓</td>
+            <td class="check">✓</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── OUTCOMES ── -->
+<section>
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Measured Outcomes</span>
+      <h2 class="section-title">What Clients Achieve Across Our Packages</h2>
+      <p class="section-subtitle">Average outcomes reported by clients 6 months after deploying their AI package — across productivity, cost, and customer experience metrics.</p>
+    </div>
+
+    <div class="outcome-grid">
+      <div class="outcome-card">
+        <div class="out-num">3x</div>
+        <h4>Productivity Gain</h4>
+        <p>Teams handle 3x more volume without adding staff — AI takes the repetitive load.</p>
+      </div>
+      <div class="outcome-card">
+        <div class="out-num">45%</div>
+        <h4>Cost Reduction</h4>
+        <p>Average operational cost reduction in automated functions within the first 6 months.</p>
+      </div>
+      <div class="outcome-card">
+        <div class="out-num">92%</div>
+        <h4>Customer Satisfaction</h4>
+        <p>Customer satisfaction scores for AI-handled interactions, versus 78% industry average.</p>
+      </div>
+      <div class="outcome-card">
+        <div class="out-num">8wk</div>
+        <h4>Time to First Value</h4>
+        <p>Average time from project kick-off to first measurable business outcome in production.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY 3WESOLUTION ── -->
+<section class="bg-secondary">
+  <div class="container">
+    <div class="two-col">
+      <div class="col-visual">📦</div>
+      <div class="col-content">
+        <span class="section-label">Why Choose a Package</span>
+        <h2>Predictable Investment. Measurable Returns.</h2>
+        <p>Custom AI projects can drag on and overrun budgets. Our packages are designed to eliminate that uncertainty — with fixed monthly investment, defined scope, agreed timelines, and clear success metrics. You know what you are getting, when you are getting it, and what success looks like before we start.</p>
+        <ul class="check-list">
+          <li>Fixed monthly pricing — no surprise invoices</li>
+          <li>Defined scope and delivery milestones agreed upfront</li>
+          <li>Success metrics established before development begins</li>
+          <li>Flexible package upgrades as your AI maturity grows</li>
+          <li>Australian-based team with Asia-Pacific enterprise experience</li>
+        </ul>
+        <a class="btn-primary" href="../contact.html">Find the Right Package for You →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section>
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Common Questions</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+    <div style="max-width:720px;margin:56px auto 0;">
+      <div style="border-bottom:1px solid var(--border);padding:24px 0;">
+        <h4 style="font-size:16px;font-weight:600;margin-bottom:10px;">Which package is right for my business?</h4>
+        <p style="font-size:14px;color:var(--text-muted);margin:0;line-height:1.7;">AI Starter is ideal for businesses deploying their first AI solution — a focused proof of concept that delivers quick wins. AI Business suits companies ready to transform multiple functions and build lasting AI capability. AI Enterprise is for organizations with complex, multi-system environments needing a dedicated AI team.</p>
+      </div>
+      <div style="border-bottom:1px solid var(--border);padding:24px 0;">
+        <h4 style="font-size:16px;font-weight:600;margin-bottom:10px;">Can I upgrade between packages?</h4>
+        <p style="font-size:14px;color:var(--text-muted);margin:0;line-height:1.7;">Yes. Most clients start with AI Starter or AI Business and upgrade as they see results. Everything built in an earlier package is preserved and extended — you never have to rebuild from scratch.</p>
+      </div>
+      <div style="border-bottom:1px solid var(--border);padding:24px 0;">
+        <h4 style="font-size:16px;font-weight:600;margin-bottom:10px;">What systems can you integrate with?</h4>
+        <p style="font-size:14px;color:var(--text-muted);margin:0;line-height:1.7;">We integrate with all major CRM (Salesforce, HubSpot, Microsoft Dynamics), ERP (SAP, Oracle, NetSuite), helpdesk (Zendesk, Freshdesk, Intercom), and communication platforms (Slack, Microsoft Teams, WhatsApp). If it has an API, we can connect to it.</p>
+      </div>
+      <div style="border-bottom:1px solid var(--border);padding:24px 0;">
+        <h4 style="font-size:16px;font-weight:600;margin-bottom:10px;">How is my data protected?</h4>
+        <p style="font-size:14px;color:var(--text-muted);margin:0;line-height:1.7;">We design every integration with data privacy as a first principle — encrypting data in transit and at rest, enforcing least-privilege access controls, and using enterprise-grade LLM providers that do not train on customer data by default. Enterprise package clients can opt for fully on-premises deployment.</p>
+      </div>
+      <div style="padding:24px 0;">
+        <h4 style="font-size:16px;font-weight:600;margin-bottom:10px;">What if the AI doesn't perform as expected?</h4>
+        <p style="font-size:14px;color:var(--text-muted);margin:0;line-height:1.7;">Every package includes a defined evaluation period with agreed success metrics. If performance falls short, we iterate at no additional cost until we meet the agreed targets. Our business depends on your results — we are invested in making this work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Not Sure Which Package Fits? Let's Talk.</h2>
+    <p>Book a free 30-minute consultation and we'll recommend the right package based on your goals, systems, and budget — no commitment required.</p>
+    <a class="btn-white" href="../contact.html">Book Your Free Consultation →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="border:none;padding:32px 0">
+      <p>© 2026 3WeSolution. All rights reserved. | <a href="mailto:info@3wesolution.com" style="color:var(--text-muted)">info@3wesolution.com</a></p>
+      <div class="footer-bottom-links">
+        <a href="../index.html">Home</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../cn/services/ai-packages.html">中文</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<!-- Tidio Chat -->
+<script src="//code.tidio.co/ytiepywz4oqgyqwiyujissnpgxysed71.js" async></script>
+</body>
+</html>

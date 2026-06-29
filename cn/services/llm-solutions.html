@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>大语言模型解决方案 – 3WeSolution</title>
+  <meta name="description" content="将GPT-4、Claude、Llama等大语言模型集成至您的CRM、ERP、客户支持系统及知识库——实现智能搜索、内容自动化与智能决策支持。"/>
+  <link rel="stylesheet" href="../../css/style.css"/>
+  <style>
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+      gap: 2px;
+      background: #e8e8ed;
+      border: 1px solid #e8e8ed;
+      border-radius: 24px;
+      overflow: hidden;
+      margin-top: 56px;
+    }
+    .feature-card {
+      background: #fff;
+      padding: 36px 32px;
+      transition: background .25s ease;
+    }
+    .feature-card:hover { background: #f5f5f7; }
+    .feature-card .fc-icon { font-size: 28px; margin-bottom: 16px; }
+    .feature-card h3 { font-size: 17px; font-weight: 600; margin-bottom: 9px; letter-spacing: -.2px; }
+    .feature-card p { font-size: 14px; color: #6e6e73; margin: 0; line-height: 1.65; }
+
+    .model-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2px;
+      background: #e8e8ed;
+      border: 1px solid #e8e8ed;
+      border-radius: 24px;
+      overflow: hidden;
+      margin-top: 56px;
+      text-align: center;
+    }
+    .model-card {
+      background: #fff;
+      padding: 36px 24px;
+      transition: background .25s ease;
+    }
+    .model-card:hover { background: #f5f5f7; }
+    .model-card .model-icon { font-size: 32px; margin-bottom: 12px; }
+    .model-card h4 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+    .model-card p { font-size: 13px; color: #6e6e73; margin: 0; line-height: 1.5; }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2px;
+      background: #e8e8ed;
+      border: 1px solid #e8e8ed;
+      border-radius: 24px;
+      overflow: hidden;
+      margin-top: 56px;
+    }
+    .process-step {
+      background: #fff;
+      padding: 40px 32px;
+      transition: background .25s ease;
+    }
+    .process-step:hover { background: #f5f5f7; }
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px; height: 40px;
+      background: #0071e3;
+      border-radius: 50%;
+      font-weight: 600;
+      font-size: 15px;
+      color: #fff;
+      margin-bottom: 18px;
+    }
+    .process-step h3 { font-size: 17px; font-weight: 600; margin-bottom: 10px; letter-spacing: -.2px; }
+    .process-step p { font-size: 14px; color: #6e6e73; margin: 0; line-height: 1.65; }
+  </style>
+</head>
+<body class="cn">
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="../../index.html">3W<span>eSolution</span></a>
+    <ul class="nav-menu">
+      <li><a href="../../index.html">首页</a></li>
+      <li class="nav-dropdown"><a href="#" class="active">服务</a>
+        <div class="dropdown-menu">
+          <a href="website-design.html"><span class="icon">🎨</span>网站设计</a>
+          <a href="web-hosting.html"><span class="icon">☁️</span>网站托管与运维</a>
+          <a href="certificate.html"><span class="icon">🔒</span>证书管理</a>
+          <a href="domain.html"><span class="icon">🌐</span>域名管理</a>
+          <a href="email.html"><span class="icon">✉️</span>邮箱管理</a>
+          <a href="social-media.html"><span class="icon">📱</span>社交媒体管理</a>
+          <a href="digitalization.html"><span class="icon">⚡</span>数字化转型</a>
+          <a href="digital-risk.html"><span class="icon">🛡️</span>数字风险防护</a>
+          <a href="ai-workflow-automation.html"><span class="icon">🤖</span>AI工作流自动化</a>
+          <a href="secure-ai-adoption.html"><span class="icon">🔐</span>安全AI采纳</a>
+          <a href="agentic-ai-solutions.html"><span class="icon">🧠</span>智能体AI解决方案</a>
+          <a href="ai-application-security.html"><span class="icon">🛡️</span>AI应用安全</a>
+          <a href="ai-agents.html"><span class="icon">🦾</span>AI智能体开发</a>
+          <a href="llm-solutions.html"><span class="icon">💡</span>大语言模型解决方案</a>
+          <a href="ai-consulting.html"><span class="icon">🎯</span>AI战略咨询</a>
+          <a href="ai-packages.html"><span class="icon">📦</span>AI转型套餐</a>
+        </div>
+      </li>
+      <li><a href="../../about.html">关于我们</a></li>
+      <li><a href="../../contact.html">联系我们</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a class="lang-switch" href="../../services/llm-solutions.html">
+        <span>🌐</span>EN | <span class="active-lang">中文</span>
+      </a>
+      <button class="nav-toggle" aria-label="菜单"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="../../index.html">首页</a> › <a href="#">服务</a> › 大语言模型解决方案</div>
+    <span class="section-label">大语言模型解决方案</span>
+    <h1>将GPT-4、Claude与Llama的<br>强大智能，嵌入您的业务系统。</h1>
+    <p>我们将全球最顶尖的大语言模型集成至您企业现有的业务工具——CRM、ERP、客户支持平台与内部知识库——无需替换现有基础设施，即可实现更智能的搜索、自动化内容生成与智能决策支持。</p>
+  </div>
+</section>
+
+<!-- ── 我们做什么 ── -->
+<section>
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">我们做什么</span>
+      <h2 class="section-title">大语言模型能力，深度融入您的业务流程</h2>
+      <p class="section-subtitle">我们不只是连接API——我们构建稳健的生产级集成，让语言AI成为您日常业务运营中可靠、持久的一部分。</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="fc-icon">🔍</div>
+        <h3>语义搜索与知识检索</h3>
+        <p>用AI驱动的语义搜索取代关键词搜索，跨越文档、产品目录与知识库精准定位——返回正确答案，而非仅匹配词汇。</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">✍️</div>
+        <h3>自动化内容生成</h3>
+        <p>LLM驱动的内容流水线，规模化自动起草产品描述、客户邮件、报告和营销文案——符合品牌调性，随时供人工审核。</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">🧩</div>
+        <h3>CRM与ERP智能层</h3>
+        <p>为CRM和ERP添加自然语言交互界面——让团队用中文或英文提问，即时获取来自实时业务数据的精准答案，无需掌握复杂查询语言。</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">📞</div>
+        <h3>客户支持增强</h3>
+        <p>为支持团队提供LLM驱动的回复建议与自动起草功能——缩短处理时间、提升回复一致性，确保坐席始终掌握最佳答案。</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">📚</div>
+        <h3>内部知识助手</h3>
+        <p>基于企业文档、政策与标准操作流程训练的对话式助手——即时解答员工问题，让机构知识向所有人开放、随时可查。</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">🤔</div>
+        <h3>决策支持系统</h3>
+        <p>LLM驱动的工具，自动汇总相关信息、识别关键风险并呈现可选方案——支持领导层和运营团队做出更快、更明智的决策。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 模型专长 ── -->
+<section class="bg-secondary">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">我们的模型专长</span>
+      <h2 class="section-title">全面覆盖主流大语言模型提供商</h2>
+      <p class="section-subtitle">我们保持模型中立——依据性能、成本、隐私与延迟要求为您的应用场景选择最合适的LLM，而非出于厂商偏好。</p>
+    </div>
+
+    <div class="model-grid">
+      <div class="model-card">
+        <div class="model-icon">🟢</div>
+        <h4>OpenAI GPT-4o & o系列</h4>
+        <p>行业领先的推理能力与多模态功能，适用于复杂的高价值企业应用场景。</p>
+      </div>
+      <div class="model-card">
+        <div class="model-icon">🟠</div>
+        <h4>Anthropic Claude</h4>
+        <p>安全优先、超长上下文处理，尤其适合文档分析、合规审查与客户面向应用。</p>
+      </div>
+      <div class="model-card">
+        <div class="model-icon">🔵</div>
+        <h4>Meta Llama</h4>
+        <p>可本地部署的开放权重模型，为要求完全数据主权或物理隔离环境的企业提供理想选择。</p>
+      </div>
+      <div class="model-card">
+        <div class="model-icon">🟣</div>
+        <h4>Google Gemini</h4>
+        <p>与Google Workspace原生集成，出色的多模态能力，适合文档、图像与音频处理工作流。</p>
+      </div>
+      <div class="model-card">
+        <div class="model-icon">⚫</div>
+        <h4>Azure OpenAI 服务</h4>
+        <p>托管于Azure的企业级OpenAI模型——满足金融、医疗等受监管行业的合规要求。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 集成流程 ── -->
+<section>
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">我们的集成流程</span>
+      <h2 class="section-title">从想法到生产集成</h2>
+      <p class="section-subtitle">经过验证的四阶段流程，从问题定义快速推进至上线部署——每个里程碑均有您的团队深度参与。</p>
+    </div>
+
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">1</div>
+        <h3>需求调研与应用场景筛选</h3>
+        <p>评估您的现有系统、数据状况与业务目标，识别投资回报最高的LLM集成机会，并按影响力与可行性排序优先级。</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">2</div>
+        <h3>模型选型与架构设计</h3>
+        <p>依据性能、成本、隐私与延迟需求，选择最优的LLM提供商与部署架构——云端API、私有云或本地部署——并设计与现有系统安全连接的集成层。</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">3</div>
+        <h3>微调与RAG实施</h3>
+        <p>配置检索增强生成（RAG）流水线，并在适当情况下基于您的专有数据进行模型微调——确保LLM以您领域的专业语言权威作答。</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">4</div>
+        <h3>部署、监控与持续优化</h3>
+        <p>生产环境部署，配备完善的日志记录、质量监控、成本控制与模型性能仪表板——并根据真实使用模式持续迭代优化。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 为何选择3WeSolution ── -->
+<section class="bg-secondary">
+  <div class="container">
+    <div class="two-col">
+      <div class="col-visual">💡</div>
+      <div class="col-content">
+        <span class="section-label">为何选择3WeSolution</span>
+        <h2>LLM集成，消除不确定性</h2>
+        <p>将LLM集成至企业系统远比看起来复杂。模型会出现幻觉，API会变更，隐私要求会增加约束，数据质量至关重要。我们在真实生产部署中已经历过所有这些挑战——在开工前就清楚知道陷阱在哪里。</p>
+        <ul class="check-list">
+          <li>厂商中立——依据您的需求选择最合适的模型</li>
+          <li>企业级数据隐私控制与合规对齐</li>
+          <li>RAG与微调专业能力，确保领域特定准确率</li>
+          <li>每项集成设计均内置成本优化考量</li>
+          <li>持续模型维护，跟进各大提供商版本更新</li>
+        </ul>
+        <a class="btn-primary" href="../../contact.html">探索大语言模型集成方案 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 客户评价 ── -->
+<section>
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">客户心声</span>
+      <h2 class="section-title">客户这样评价我们</h2>
+      <p class="section-subtitle">集成大语言模型后，改变了团队工作方式的真实案例。</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"与3WeSolution共同构建的LLM搜索将我们的支持工单量减少了45%——客户现在能自主找到答案，无需等待坐席。"</p>
+        <div class="testimonial-author">
+          <div class="avatar">👩‍💼</div>
+          <div><h5>林雷切尔</h5><span>客户成功负责人，SaaS平台</span></div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"我们的销售团队现在有了访问整个CRM的对话式界面，即时获取交易摘要、下一步建议和风险预警——就像每次通话都有高级分析师在旁。"</p>
+        <div class="testimonial-author">
+          <div class="avatar">👨‍💼</div>
+          <div><h5>迈克尔·托雷斯</h5><span>销售副总裁，B2B软件公司</span></div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"以前需要营销团队一周才能完成的内容，现在一个下午就搞定了。LLM集成遵循我们的品牌规范，质量持续稳定。"</p>
+        <div class="testimonial-author">
+          <div class="avatar">👩‍💼</div>
+          <div><h5>普里亚·夏尔马</h5><span>营销总监，区域零售品牌</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section">
+  <div class="container">
+    <h2>准备好将大语言模型的力量引入您的业务了吗？</h2>
+    <p>告诉我们您使用的系统和想要解决的问题——我们将为您规划实用的集成路径，提供清晰的成果预期与合理的时间规划。</p>
+    <a class="btn-white" href="../../contact.html">预约免费LLM集成咨询 →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="border:none;padding:32px 0">
+      <p>© 2026 3WeSolution. 版权所有。 | <a href="mailto:info@3wesolution.com" style="color:var(--text-muted)">info@3wesolution.com</a></p>
+      <div class="footer-bottom-links">
+        <a href="../../index.html">首页</a>
+        <a href="../../contact.html">联系我们</a>
+        <a href="../../services/llm-solutions.html">English</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../js/main.js"></script>
+<!-- Tidio Chat -->
+<script src="//code.tidio.co/ytiepywz4oqgyqwiyujissnpgxysed71.js" async></script>
+</body>
+</html>

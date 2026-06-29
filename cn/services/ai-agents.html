@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI智能体开发 – 3WeSolution</title>
+  <meta name="description" content="构建定制AI智能体，全天候自动处理客户咨询、文档处理、工作流自动化等重复性任务——大幅降低运营成本，实现无需扩招的规模增长。"/>
+  <link rel="stylesheet" href="../../css/style.css"/>
+  <style>
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+      gap: 2px;
+      background: #e8e8ed;
+      border: 1px solid #e8e8ed;
+      border-radius: 24px;
+      overflow: hidden;
+      margin-top: 56px;
+    }
+    .feature-card {
+      background: #fff;
+      padding: 36px 32px;
+      transition: background .25s ease;
+    }
+    .feature-card:hover { background: #f5f5f7; }
+    .feature-card .fc-icon { font-size: 28px; margin-bottom: 16px; }
+    .feature-card h3 { font-size: 17px; font-weight: 600; margin-bottom: 9px; letter-spacing: -.2px; }
+    .feature-card p { font-size: 14px; color: #6e6e73; margin: 0; line-height: 1.65; }
+
+    .use-case-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2px;
+      background: #e8e8ed;
+      border: 1px solid #e8e8ed;
+      border-radius: 24px;
+      overflow: hidden;
+      margin-top: 56px;
+    }
+    .use-case-card {
+      background: #fff;
+      padding: 36px 32px;
+      transition: background .25s ease;
+    }
+    .use-case-card:hover { background: #f5f5f7; }
+    .use-case-card .uc-icon { font-size: 28px; margin-bottom: 14px; }
+    .use-case-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; letter-spacing: -.2px; }
+    .use-case-card p { font-size: 14px; color: #6e6e73; margin: 0 0 12px; line-height: 1.65; }
+    .use-case-card .uc-result { font-size: 13px; font-weight: 600; color: #0071e3; }
+
+    .roi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2px;
+      background: #e8e8ed;
+      border: 1px solid #e8e8ed;
+      border-radius: 24px;
+      overflow: hidden;
+      margin-top: 56px;
+      text-align: center;
+    }
+    .roi-card {
+      background: #fff;
+      padding: 40px 24px;
+    }
+    .roi-card .roi-num { font-size: 40px; font-weight: 700; color: #0071e3; letter-spacing: -1px; margin-bottom: 8px; }
+    .roi-card h4 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+    .roi-card p { font-size: 13px; color: #6e6e73; margin: 0; line-height: 1.5; }
+  </style>
+</head>
+<body class="cn">
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="../../index.html">3W<span>eSolution</span></a>
+    <ul class="nav-menu">
+      <li><a href="../../index.html">首页</a></li>
+      <li class="nav-dropdown"><a href="#" class="active">服务</a>
+        <div class="dropdown-menu">
+          <a href="website-design.html"><span class="icon">🎨</span>网站设计</a>
+          <a href="web-hosting.html"><span class="icon">☁️</span>网站托管与运维</a>
+          <a href="certificate.html"><span class="icon">🔒</span>证书管理</a>
+          <a href="domain.html"><span class="icon">🌐</span>域名管理</a>
+          <a href="email.html"><span class="icon">✉️</span>邮箱管理</a>
+          <a href="social-media.html"><span class="icon">📱</span>社交媒体管理</a>
+          <a href="digitalization.html"><span class="icon">⚡</span>数字化转型</a>
+          <a href="digital-risk.html"><span class="icon">🛡️</span>数字风险防护</a>
+          <a href="ai-workflow-automation.html"><span class="icon">🤖</span>AI工作流自动化</a>
+          <a href="secure-ai-adoption.html"><span class="icon">🔐</span>安全AI采纳</a>
+          <a href="agentic-ai-solutions.html"><span class="icon">🧠</span>智能体AI解决方案</a>
+          <a href="ai-application-security.html"><span class="icon">🛡️</span>AI应用安全</a>
+          <a href="ai-agents.html"><span class="icon">🦾</span>AI智能体开发</a>
+          <a href="llm-solutions.html"><span class="icon">💡</span>大语言模型解决方案</a>
+          <a href="ai-consulting.html"><span class="icon">🎯</span>AI战略咨询</a>
+          <a href="ai-packages.html"><span class="icon">📦</span>AI转型套餐</a>
+        </div>
+      </li>
+      <li><a href="../../about.html">关于我们</a></li>
+      <li><a href="../../contact.html">联系我们</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a class="lang-switch" href="../../services/ai-agents.html">
+        <span>🌐</span>EN | <span class="active-lang">中文</span>
+      </a>
+      <button class="nav-toggle" aria-label="菜单"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="../../index.html">首页</a> › <a href="#">服务</a> › AI智能体开发</div>
+    <span class="section-label">AI智能体开发</span>
+    <h1>AI智能体持续工作，<br>您安心休息。</h1>
+    <p>我们构建定制AI智能体，承担您最耗时的任务——全天候响应客户咨询、处理文档、自动化工作流，彻底消除拖慢团队效率的重复性工作。更少的人工投入，更快的业务成果，无需增加人手即可实现规模扩张。</p>
+  </div>
+</section>
+
+<!-- ── 我们构建什么 ── -->
+<section>
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">我们构建什么</span>
+      <h2 class="section-title">专为真实业务问题打造的定制智能体</h2>
+      <p class="section-subtitle">我们开发的每个智能体都围绕特定业务目标设计——不是通用聊天机器人，而是深度理解您业务流程、使用您的语言、并能交付可量化成果的专业AI工作者。</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="fc-icon">💬</div>
+        <h3>客户服务智能体</h3>
+        <p>全天候处理一线客户咨询、解决常见问题、将复杂情况升级转接的AI智能体——保持跨对话上下文，永不疲倦，质量始终如一。</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">📄</div>
+        <h3>文档处理智能体</h3>
+        <p>从合同、发票、表单和报告中自动提取、分类、验证并路由信息——将数小时的人工文档处理压缩至数秒的自动化处理。</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">⚙️</div>
+        <h3>工作流自动化智能体</h3>
+        <p>端到端自动化多步骤业务流程——从数据采集、核验到审批和通知——内置异常处理机制与完整的操作审计记录。</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">🔍</div>
+        <h3>市场情报智能体</h3>
+        <p>持续监控市场动态、竞争对手与行业新闻的智能体——按计划或事件触发，自动采集、综合并输出可执行的情报报告。</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">📊</div>
+        <h3>数据分析智能体</h3>
+        <p>自动查询数据库、生成洞察并发现异常的智能体——用自然语言呈现业务智能，无需团队编写SQL或解读原始数据。</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">🔗</div>
+        <h3>系统集成智能体</h3>
+        <p>打通孤立系统的桥梁智能体——从CRM拉取数据、更新ERP、推送Slack通知、触发下游工作流，跨越您整个软件生态高效联动。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 行业应用与ROI ── -->
+<section class="bg-secondary">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">真实落地案例</span>
+      <h2 class="section-title">跨行业的验证成果</h2>
+      <p class="section-subtitle">AI智能体从第一天起就能带来可量化的投资回报。以下是企业见效最快、收益最大的核心应用场景。</p>
+    </div>
+
+    <div class="use-case-grid">
+      <div class="use-case-card">
+        <div class="uc-icon">🏦</div>
+        <h3>金融服务</h3>
+        <p>贷款申请处理、KYC文件核验、欺诈预警分诊、合规监控——全程自动化，保留完整审计追踪。</p>
+        <div class="uc-result">↓ 处理时间减少70%</div>
+      </div>
+      <div class="use-case-card">
+        <div class="uc-icon">🛒</div>
+        <h3>零售与电商</h3>
+        <p>订单追踪智能体、退货处理、商品推荐响应、库存查询处理——释放客服团队，专注高价值互动。</p>
+        <div class="uc-result">↓ 支持工单量减少60%</div>
+      </div>
+      <div class="use-case-card">
+        <div class="uc-icon">🏥</div>
+        <h3>医疗健康</h3>
+        <p>预约调度、患者入院表单处理、医保核验、常见问题解答——在不增加行政人员的前提下提升患者体验。</p>
+        <div class="uc-result">↑ 患者咨询解决率85%</div>
+      </div>
+      <div class="use-case-card">
+        <div class="uc-icon">🏭</div>
+        <h3>制造与物流</h3>
+        <p>供应商沟通智能体、货物追踪、质检报告提取、采购审批工作流——减少整个供应链的延误环节。</p>
+        <div class="uc-result">↓ 采购周期缩短40%</div>
+      </div>
+      <div class="use-case-card">
+        <div class="uc-icon">⚖️</div>
+        <h3>法律与专业服务</h3>
+        <p>合同审查智能体、文件摘要、客户入职处理、合规清单自动化——让专业人士专注于高判断力的核心工作。</p>
+        <div class="uc-result">↑ 可计费工时容量提升3倍</div>
+      </div>
+      <div class="use-case-card">
+        <div class="uc-icon">🎓</div>
+        <h3>教育与培训</h3>
+        <p>招生咨询智能体、课程推荐系统、作业反馈自动化、学习进度监控——在规模化场景下实现个性化学习体验。</p>
+        <div class="uc-result">↑ 学员参与度提升50%</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ROI指标 ── -->
+<section>
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">商业价值</span>
+      <h2 class="section-title">AI智能体对您利润的直接影响</h2>
+      <p class="section-subtitle">在我们的客户部署案例中，AI智能体在以下四个维度持续交付可量化成果，直接影响企业核心业务表现。</p>
+    </div>
+
+    <div class="roi-grid">
+      <div class="roi-card">
+        <div class="roi-num">80%</div>
+        <h4>人工劳动减少</h4>
+        <p>原本需要人力完成的任务自动处理，团队专注于更高价值的工作。</p>
+      </div>
+      <div class="roi-card">
+        <div class="roi-num">24/7</div>
+        <h4>全天候运营</h4>
+        <p>智能体从不休息，从不请假，在任何时间保持一致的服务质量。</p>
+      </div>
+      <div class="roi-card">
+        <div class="roi-num">10x</div>
+        <h4>响应速度提升</h4>
+        <p>客户咨询和内部请求在数秒内完成处理，而非数小时或数天。</p>
+      </div>
+      <div class="roi-card">
+        <div class="roi-num">60%</div>
+        <h4>运营成本降低</h4>
+        <p>规模化自动处理，无需同比例增加人手——每笔交易成本大幅下降。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 为何选择3WeSolution ── -->
+<section class="bg-secondary">
+  <div class="container">
+    <div class="two-col">
+      <div class="col-visual">🦾</div>
+      <div class="col-content">
+        <span class="section-label">为何选择3WeSolution</span>
+        <h2>在生产环境中稳定运行的智能体</h2>
+        <p>我们不交付令人印象深刻的演示。我们构建在您真实环境中可靠运行的AI智能体——与您的系统深度集成，基于您的数据训练，针对您的特定工作流优化。每个智能体上线均配备监控、日志记录和清晰的边缘情况升级路径。</p>
+        <ul class="check-list">
+          <li>围绕您的业务流程定制开发，而非通用模板</li>
+          <li>与现有CRM、ERP及业务工具的深度集成</li>
+          <li>安全优先设计，内置数据隐私保护控制</li>
+          <li>开发启动前确认并约定可量化的成功标准</li>
+          <li>持续支持、性能监控与模型更新维护</li>
+        </ul>
+        <a class="btn-primary" href="../../contact.html">探讨您的智能体需求 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 客户评价 ── -->
+<section>
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">客户心声</span>
+      <h2 class="section-title">客户这样评价我们</h2>
+      <p class="section-subtitle">部署AI智能体并切实衡量变化的企业真实反馈。</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"3WeSolution的AI自动化将我们的发票处理从3天缩短至3小时，第一个月就看到了明显的投资回报。"</p>
+        <div class="testimonial-author">
+          <div class="avatar">👩‍💼</div>
+          <div><h5>陈慧敏</h5><span>首席运营官，太平洋物流集团</span></div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"我们的AI助手全天候处理一线客户咨询，解决率显著提升，客服运营成本降低了35%。"</p>
+        <div class="testimonial-author">
+          <div class="avatar">👩‍💼</div>
+          <div><h5>吴嘉慧</h5><span>客户体验总监，亮彩零售</span></div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"我们借助他们的智能体流水线实现了整个客户入职流程的自动化，团队现在专注于客户关系而非繁琐的文书工作。"</p>
+        <div class="testimonial-author">
+          <div class="avatar">👨‍💼</div>
+          <div><h5>谭志明</h5><span>运营副总裁，金融桥亚洲</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section">
+  <div class="container">
+    <h2>准备好让AI为您的业务高效运转了吗？</h2>
+    <p>告诉我们您最大的运营痛点，我们将展示AI智能体如何解决它——并提供清晰的时间节点与可量化的业务成果。</p>
+    <a class="btn-white" href="../../contact.html">获取免费智能体评估 →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="border:none;padding:32px 0">
+      <p>© 2026 3WeSolution. 版权所有。 | <a href="mailto:info@3wesolution.com" style="color:var(--text-muted)">info@3wesolution.com</a></p>
+      <div class="footer-bottom-links">
+        <a href="../../index.html">首页</a>
+        <a href="../../contact.html">联系我们</a>
+        <a href="../../services/ai-agents.html">English</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../js/main.js"></script>
+<!-- Tidio Chat -->
+<script src="//code.tidio.co/ytiepywz4oqgyqwiyujissnpgxysed71.js" async></script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Strategy & Consulting – 3WeSolution</title>
+  <meta name="description" content="Assess your AI readiness, identify high-ROI use cases, build a practical AI roadmap, and implement governance frameworks — with expert guidance at every stage of your AI transformation."/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+      gap: 2px;
+      background: #e8e8ed;
+      border: 1px solid #e8e8ed;
+      border-radius: 24px;
+      overflow: hidden;
+      margin-top: 56px;
+    }
+    .feature-card {
+      background: #fff;
+      padding: 36px 32px;
+      transition: background .25s ease;
+    }
+    .feature-card:hover { background: #f5f5f7; }
+    .feature-card .fc-icon { font-size: 28px; margin-bottom: 16px; }
+    .feature-card h3 { font-size: 17px; font-weight: 600; margin-bottom: 9px; letter-spacing: -.2px; }
+    .feature-card p { font-size: 14px; color: #6e6e73; margin: 0; line-height: 1.65; }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2px;
+      background: #e8e8ed;
+      border: 1px solid #e8e8ed;
+      border-radius: 24px;
+      overflow: hidden;
+      margin-top: 56px;
+    }
+    .process-step {
+      background: #fff;
+      padding: 40px 32px;
+      transition: background .25s ease;
+    }
+    .process-step:hover { background: #f5f5f7; }
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px; height: 40px;
+      background: #0071e3;
+      border-radius: 50%;
+      font-weight: 600;
+      font-size: 15px;
+      color: #fff;
+      margin-bottom: 18px;
+    }
+    .process-step h3 { font-size: 17px; font-weight: 600; margin-bottom: 10px; letter-spacing: -.2px; }
+    .process-step p { font-size: 14px; color: #6e6e73; margin: 0; line-height: 1.65; }
+
+    .deliverable-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2px;
+      background: #e8e8ed;
+      border: 1px solid #e8e8ed;
+      border-radius: 24px;
+      overflow: hidden;
+      margin-top: 56px;
+    }
+    .deliverable-card {
+      background: #fff;
+      padding: 36px 32px;
+      transition: background .25s ease;
+    }
+    .deliverable-card:hover { background: #f5f5f7; }
+    .deliverable-card .del-icon { font-size: 28px; margin-bottom: 14px; }
+    .deliverable-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; letter-spacing: -.2px; }
+    .deliverable-card p { font-size: 14px; color: #6e6e73; margin: 0; line-height: 1.65; }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="../index.html">3W<span>eSolution</span></a>
+    <ul class="nav-menu">
+      <li><a href="../index.html">Home</a></li>
+      <li class="nav-dropdown"><a href="#" class="active">Services</a>
+        <div class="dropdown-menu">
+          <a href="website-design.html"><span class="icon">🎨</span>Website Design</a>
+          <a href="web-hosting.html"><span class="icon">☁️</span>Web Hosting & Ops</a>
+          <a href="certificate.html"><span class="icon">🔒</span>Certificate Mgmt</a>
+          <a href="domain.html"><span class="icon">🌐</span>Domain Mgmt</a>
+          <a href="email.html"><span class="icon">✉️</span>Email Mgmt</a>
+          <a href="social-media.html"><span class="icon">📱</span>Social Media Mgmt</a>
+          <a href="digitalization.html"><span class="icon">⚡</span>Digitalization</a>
+          <a href="digital-risk.html"><span class="icon">🛡️</span>Digital Risk Protection</a>
+          <a href="ai-workflow-automation.html"><span class="icon">🤖</span>AI Workflow Automation</a>
+          <a href="secure-ai-adoption.html"><span class="icon">🔐</span>Secure AI Adoption</a>
+          <a href="agentic-ai-solutions.html"><span class="icon">🧠</span>Agentic AI Solutions</a>
+          <a href="ai-application-security.html"><span class="icon">🛡️</span>AI Application Security</a>
+          <a href="ai-agents.html"><span class="icon">🦾</span>AI Agent Development</a>
+          <a href="llm-solutions.html"><span class="icon">💡</span>LLM Integration & Solutions</a>
+          <a href="ai-consulting.html"><span class="icon">🎯</span>AI Strategy & Consulting</a>
+          <a href="ai-packages.html"><span class="icon">📦</span>AI Transformation Packages</a>
+        </div>
+      </li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a class="lang-switch" href="../cn/services/ai-consulting.html"><span>🌐</span><span class="active-lang">EN</span> | 中文</a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="#">Services</a> › AI Strategy & Consulting</div>
+    <span class="section-label">AI Strategy & Consulting</span>
+    <h1>AI Transformation That Starts<br>With the Right Strategy.</h1>
+    <p>Most AI initiatives fail not because of the technology — but because of unclear goals, poor use case selection, and absent governance. We help enterprises build a clear, practical AI strategy that identifies where AI creates the most value, how to implement it safely, and how to measure success from day one.</p>
+  </div>
+</section>
+
+<!-- ── WHAT WE OFFER ── -->
+<section>
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">What We Offer</span>
+      <h2 class="section-title">Strategic Guidance at Every Stage of Your AI Journey</h2>
+      <p class="section-subtitle">Whether you are just beginning to explore AI or scaling an existing program, we provide the expertise and structure to move forward with confidence — and without wasted investment.</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="fc-icon">🔎</div>
+        <h3>AI Readiness Assessment</h3>
+        <p>A structured evaluation of your organization's data maturity, technology infrastructure, workforce capabilities, and cultural readiness — delivering an honest baseline from which to build.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">🎯</div>
+        <h3>High-ROI Use Case Identification</h3>
+        <p>Systematic analysis of your business processes to identify where AI delivers the greatest productivity gains, cost reductions, and revenue opportunities — ranked by impact and implementation complexity.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">🗺️</div>
+        <h3>AI Roadmap Development</h3>
+        <p>A phased, prioritized roadmap that sequences your AI investments logically — quick wins first to build momentum, then progressively more complex transformations as your capabilities mature.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">⚖️</div>
+        <h3>AI Governance Framework</h3>
+        <p>Policies, processes, and accountability structures for responsible AI use — covering data ethics, model transparency, bias mitigation, regulatory compliance, and incident response procedures.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">👥</div>
+        <h3>Change Management & Workforce Enablement</h3>
+        <p>Structured programs to bring your leadership and workforce along the AI journey — from executive alignment workshops to hands-on training for frontline teams adopting AI-augmented tools.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">📈</div>
+        <h3>AI Performance Measurement</h3>
+        <p>KPI frameworks and measurement systems that track the business impact of AI investments — connecting technical metrics to commercial outcomes so leadership can see the value clearly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW WE WORK ── -->
+<section class="bg-secondary">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Our Consulting Approach</span>
+      <h2 class="section-title">Practical Strategy, Not Theoretical Frameworks</h2>
+      <p class="section-subtitle">We combine deep technical expertise with business strategy — ensuring recommendations are grounded in what is actually achievable with your data, systems, and team today.</p>
+    </div>
+
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">1</div>
+        <h3>Discovery & Stakeholder Alignment</h3>
+        <p>Workshops with your leadership, IT, and operational teams to understand your business goals, current pain points, existing technology investments, and organizational constraints.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">2</div>
+        <h3>Assessment & Opportunity Analysis</h3>
+        <p>Deep-dive into your data landscape, processes, and competitive environment — producing a clear picture of where AI creates value and where it doesn't, backed by evidence and industry benchmarks.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">3</div>
+        <h3>Strategy & Roadmap Design</h3>
+        <p>We co-design the AI strategy with your team — ensuring ownership and buy-in from the start — producing a phased roadmap with clear milestones, resource requirements, and expected outcomes.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">4</div>
+        <h3>Implementation Oversight & Governance</h3>
+        <p>We stay engaged as implementation begins — reviewing vendor selections, overseeing pilot projects, establishing governance processes, and course-correcting when reality diverges from the plan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── DELIVERABLES ── -->
+<section>
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">What You Receive</span>
+      <h2 class="section-title">Tangible Deliverables That Drive Action</h2>
+      <p class="section-subtitle">Every engagement produces concrete, actionable outputs that your team can implement — not slide decks that gather dust.</p>
+    </div>
+
+    <div class="deliverable-grid">
+      <div class="deliverable-card">
+        <div class="del-icon">📋</div>
+        <h3>AI Readiness Report</h3>
+        <p>A scored assessment of your organization across six dimensions: data, infrastructure, talent, leadership, culture, and governance — with specific improvement recommendations for each.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="del-icon">🏆</div>
+        <h3>Use Case Priority Matrix</h3>
+        <p>A ranked shortlist of AI use cases with estimated ROI, implementation complexity, data requirements, and recommended technology approach for each opportunity.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="del-icon">🗓️</div>
+        <h3>18-Month AI Roadmap</h3>
+        <p>A phased implementation plan with defined milestones, resource allocations, technology decisions, and success metrics — reviewed and owned by your leadership team.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="del-icon">📜</div>
+        <h3>AI Governance Policy Pack</h3>
+        <p>Customized policies covering acceptable use, data handling, model oversight, vendor management, and incident response — ready for board approval and regulatory review.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="del-icon">📊</div>
+        <h3>AI Business Case Template</h3>
+        <p>A financial model and presentation framework for building internal investment cases — enabling your team to secure budget approval for AI initiatives with confidence.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="del-icon">🎓</div>
+        <h3>Executive AI Literacy Workshop</h3>
+        <p>A tailored half-day session for your C-suite and board — building the AI literacy needed to ask the right questions, make informed decisions, and avoid costly mistakes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY 3WESOLUTION ── -->
+<section class="bg-secondary">
+  <div class="container">
+    <div class="two-col">
+      <div class="col-visual">🎯</div>
+      <div class="col-content">
+        <span class="section-label">Why 3WeSolution</span>
+        <h2>Strategy That Comes With Implementation Capability</h2>
+        <p>Most consulting firms produce strategies. We produce strategies and then execute them. Because we build AI agents, integrate LLMs, and deploy agentic systems ourselves, our strategic advice is grounded in engineering reality — not marketing brochures. We know what is actually possible, how long it takes, and what it costs.</p>
+        <ul class="check-list">
+          <li>Combined business strategy and AI engineering expertise</li>
+          <li>Vendor-neutral advice — we recommend what is right, not what is profitable</li>
+          <li>Hands-on implementation capability alongside the consulting work</li>
+          <li>Experience across regulated industries: finance, healthcare, logistics</li>
+          <li>Bilingual delivery — English and Mandarin for Asia-Pacific enterprises</li>
+        </ul>
+        <a class="btn-primary" href="../contact.html">Schedule Your AI Strategy Session →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section>
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Client Stories</span>
+      <h2 class="section-title">What Our Clients Say</h2>
+      <p class="section-subtitle">Organizations that turned AI ambition into structured, measurable programs.</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"3WeSolution gave us clarity we didn't have before. We went from 'we should do something with AI' to a board-approved roadmap with a clear first year of execution."</p>
+        <div class="testimonial-author">
+          <div class="avatar">👨‍💼</div>
+          <div><h5>Andrew Kim</h5><span>CEO, Regional Insurance Group</span></div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"Their readiness assessment saved us from spending $2M on an AI initiative our data infrastructure couldn't support. That alone was worth the engagement."</p>
+        <div class="testimonial-author">
+          <div class="avatar">👩‍💼</div>
+          <div><h5>Linda Zhang</h5><span>CIO, Manufacturing Conglomerate</span></div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"Their responsible AI framework helped us satisfy both our legal team and our board. A rare combination of technical depth and business fluency."</p>
+        <div class="testimonial-author">
+          <div class="avatar">👨‍💼</div>
+          <div><h5>David Park</h5><span>CTO, MedCore Solutions</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Let's Build Your AI Strategy Together.</h2>
+    <p>Start with a free 60-minute strategy session — we'll assess your current position, discuss your goals, and outline a practical path forward.</p>
+    <a class="btn-white" href="../contact.html">Book Your Free Strategy Session →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="border:none;padding:32px 0">
+      <p>© 2026 3WeSolution. All rights reserved. | <a href="mailto:info@3wesolution.com" style="color:var(--text-muted)">info@3wesolution.com</a></p>
+      <div class="footer-bottom-links">
+        <a href="../index.html">Home</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../cn/services/ai-consulting.html">中文</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<!-- Tidio Chat -->
+<script src="//code.tidio.co/ytiepywz4oqgyqwiyujissnpgxysed71.js" async></script>
+</body>
+</html>

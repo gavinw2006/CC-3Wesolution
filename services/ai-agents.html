@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Agent Development – 3WeSolution</title>
+  <meta name="description" content="Build custom AI agents that automate workflows, handle customer queries 24/7, process documents, and eliminate repetitive tasks — reducing costs and scaling without headcount."/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+      gap: 2px;
+      background: #e8e8ed;
+      border: 1px solid #e8e8ed;
+      border-radius: 24px;
+      overflow: hidden;
+      margin-top: 56px;
+    }
+    .feature-card {
+      background: #fff;
+      padding: 36px 32px;
+      transition: background .25s ease;
+    }
+    .feature-card:hover { background: #f5f5f7; }
+    .feature-card .fc-icon { font-size: 28px; margin-bottom: 16px; }
+    .feature-card h3 { font-size: 17px; font-weight: 600; margin-bottom: 9px; letter-spacing: -.2px; }
+    .feature-card p { font-size: 14px; color: #6e6e73; margin: 0; line-height: 1.65; }
+
+    .use-case-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2px;
+      background: #e8e8ed;
+      border: 1px solid #e8e8ed;
+      border-radius: 24px;
+      overflow: hidden;
+      margin-top: 56px;
+    }
+    .use-case-card {
+      background: #fff;
+      padding: 36px 32px;
+      transition: background .25s ease;
+    }
+    .use-case-card:hover { background: #f5f5f7; }
+    .use-case-card .uc-icon { font-size: 28px; margin-bottom: 14px; }
+    .use-case-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; letter-spacing: -.2px; }
+    .use-case-card p { font-size: 14px; color: #6e6e73; margin: 0 0 12px; line-height: 1.65; }
+    .use-case-card .uc-result { font-size: 13px; font-weight: 600; color: #0071e3; }
+
+    .roi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2px;
+      background: #e8e8ed;
+      border: 1px solid #e8e8ed;
+      border-radius: 24px;
+      overflow: hidden;
+      margin-top: 56px;
+      text-align: center;
+    }
+    .roi-card {
+      background: #fff;
+      padding: 40px 24px;
+    }
+    .roi-card .roi-num { font-size: 40px; font-weight: 700; color: #0071e3; letter-spacing: -1px; margin-bottom: 8px; }
+    .roi-card h4 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+    .roi-card p { font-size: 13px; color: #6e6e73; margin: 0; line-height: 1.5; }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="../index.html">3W<span>eSolution</span></a>
+    <ul class="nav-menu">
+      <li><a href="../index.html">Home</a></li>
+      <li class="nav-dropdown"><a href="#" class="active">Services</a>
+        <div class="dropdown-menu">
+          <a href="website-design.html"><span class="icon">🎨</span>Website Design</a>
+          <a href="web-hosting.html"><span class="icon">☁️</span>Web Hosting & Ops</a>
+          <a href="certificate.html"><span class="icon">🔒</span>Certificate Mgmt</a>
+          <a href="domain.html"><span class="icon">🌐</span>Domain Mgmt</a>
+          <a href="email.html"><span class="icon">✉️</span>Email Mgmt</a>
+          <a href="social-media.html"><span class="icon">📱</span>Social Media Mgmt</a>
+          <a href="digitalization.html"><span class="icon">⚡</span>Digitalization</a>
+          <a href="digital-risk.html"><span class="icon">🛡️</span>Digital Risk Protection</a>
+          <a href="ai-workflow-automation.html"><span class="icon">🤖</span>AI Workflow Automation</a>
+          <a href="secure-ai-adoption.html"><span class="icon">🔐</span>Secure AI Adoption</a>
+          <a href="agentic-ai-solutions.html"><span class="icon">🧠</span>Agentic AI Solutions</a>
+          <a href="ai-application-security.html"><span class="icon">🛡️</span>AI Application Security</a>
+          <a href="ai-agents.html"><span class="icon">🦾</span>AI Agent Development</a>
+          <a href="llm-solutions.html"><span class="icon">💡</span>LLM Integration & Solutions</a>
+          <a href="ai-consulting.html"><span class="icon">🎯</span>AI Strategy & Consulting</a>
+          <a href="ai-packages.html"><span class="icon">📦</span>AI Transformation Packages</a>
+        </div>
+      </li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a class="lang-switch" href="../cn/services/ai-agents.html"><span>🌐</span><span class="active-lang">EN</span> | 中文</a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="#">Services</a> › AI Agent Development</div>
+    <span class="section-label">AI Agent Development</span>
+    <h1>AI Agents That Work<br>While You Sleep.</h1>
+    <p>We build custom AI agents that handle your most time-consuming tasks — responding to customers 24/7, processing documents, automating workflows, and eliminating the repetitive work that slows your team down. Less manual effort. Faster outcomes. Scale without adding headcount.</p>
+  </div>
+</section>
+
+<!-- ── WHAT WE BUILD ── -->
+<section>
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">What We Build</span>
+      <h2 class="section-title">Purpose-Built Agents for Real Business Problems</h2>
+      <p class="section-subtitle">Every agent we develop is designed around a specific business outcome — not a generic chatbot, but a specialized worker that knows your processes, speaks your language, and delivers measurable results.</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="fc-icon">💬</div>
+        <h3>Customer Service Agents</h3>
+        <p>AI agents that handle tier-1 customer queries, resolve common issues, escalate complex cases, and maintain context across conversations — available 24/7 without fatigue or inconsistency.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">📄</div>
+        <h3>Document Processing Agents</h3>
+        <p>Agents that extract, classify, validate, and route information from contracts, invoices, forms, and reports — turning hours of manual document handling into seconds of automated processing.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">⚙️</div>
+        <h3>Workflow Automation Agents</h3>
+        <p>End-to-end automation of multi-step business processes — from data collection and verification to approvals and notifications — with built-in exception handling and audit trails.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">🔍</div>
+        <h3>Research & Intelligence Agents</h3>
+        <p>Agents that monitor markets, competitors, and industry news — gathering, synthesizing, and delivering actionable intelligence reports on a schedule or triggered by specific events.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">📊</div>
+        <h3>Data Analysis Agents</h3>
+        <p>Agents that query databases, generate insights, and surface anomalies — delivering business intelligence in plain language without requiring your team to write SQL or interpret raw data.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">🔗</div>
+        <h3>System Integration Agents</h3>
+        <p>Agents that bridge disconnected systems — pulling data from your CRM, updating your ERP, posting to Slack, and triggering downstream workflows across your entire software stack.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── USE CASES & ROI ── -->
+<section class="bg-secondary">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Real-World Impact</span>
+      <h2 class="section-title">Proven Results Across Industries</h2>
+      <p class="section-subtitle">AI agents deliver measurable ROI from day one. Here are the use cases where businesses see the fastest and largest returns.</p>
+    </div>
+
+    <div class="use-case-grid">
+      <div class="use-case-card">
+        <div class="uc-icon">🏦</div>
+        <h3>Financial Services</h3>
+        <p>Loan application processing, KYC document verification, fraud alert triage, and regulatory compliance monitoring — all automated with full audit trails.</p>
+        <div class="uc-result">↓ 70% processing time reduction</div>
+      </div>
+      <div class="use-case-card">
+        <div class="uc-icon">🛒</div>
+        <h3>Retail & E-Commerce</h3>
+        <p>Order tracking agents, return processing, product recommendation responses, and inventory query handling — freeing support teams for high-value interactions.</p>
+        <div class="uc-result">↓ 60% support ticket volume</div>
+      </div>
+      <div class="use-case-card">
+        <div class="uc-icon">🏥</div>
+        <h3>Healthcare</h3>
+        <p>Appointment scheduling, patient intake form processing, insurance verification, and FAQ handling — improving patient experience without adding administrative staff.</p>
+        <div class="uc-result">↑ 85% patient query resolution rate</div>
+      </div>
+      <div class="use-case-card">
+        <div class="uc-icon">🏭</div>
+        <h3>Manufacturing & Logistics</h3>
+        <p>Supplier communication agents, shipment tracking, quality control report extraction, and procurement approval workflows — reducing delays across the supply chain.</p>
+        <div class="uc-result">↓ 40% procurement cycle time</div>
+      </div>
+      <div class="use-case-card">
+        <div class="uc-icon">⚖️</div>
+        <h3>Legal & Professional Services</h3>
+        <p>Contract review agents, document summarization, client intake processing, and compliance checklist automation — enabling professionals to focus on high-judgment work.</p>
+        <div class="uc-result">↑ 3x billable hours capacity</div>
+      </div>
+      <div class="use-case-card">
+        <div class="uc-icon">🎓</div>
+        <h3>Education & Training</h3>
+        <p>Enrollment enquiry agents, course recommendation systems, assignment feedback automation, and learner progress monitoring — personalizing the learning experience at scale.</p>
+        <div class="uc-result">↑ 50% learner engagement rates</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ROI METRICS ── -->
+<section>
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">The Business Case</span>
+      <h2 class="section-title">What AI Agents Do for Your Bottom Line</h2>
+      <p class="section-subtitle">Across our client deployments, AI agents consistently deliver on four dimensions that directly impact business performance.</p>
+    </div>
+
+    <div class="roi-grid">
+      <div class="roi-card">
+        <div class="roi-num">80%</div>
+        <h4>Reduction in Manual Labor</h4>
+        <p>Tasks that required human effort are handled automatically, freeing your team for higher-value work.</p>
+      </div>
+      <div class="roi-card">
+        <div class="roi-num">24/7</div>
+        <h4>Round-the-Clock Operations</h4>
+        <p>Agents never sleep, never call in sick, and maintain consistent quality at any hour.</p>
+      </div>
+      <div class="roi-card">
+        <div class="roi-num">10x</div>
+        <h4>Faster Response Times</h4>
+        <p>Customer queries and internal requests resolved in seconds rather than hours or days.</p>
+      </div>
+      <div class="roi-card">
+        <div class="roi-num">60%</div>
+        <h4>Lower Operational Costs</h4>
+        <p>Automate at scale without proportional headcount growth — your cost per transaction plummets.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY 3WESOLUTION ── -->
+<section class="bg-secondary">
+  <div class="container">
+    <div class="two-col">
+      <div class="col-visual">🦾</div>
+      <div class="col-content">
+        <span class="section-label">Why 3WeSolution</span>
+        <h2>Agents Built to Perform in Production</h2>
+        <p>We don't deliver impressive demos. We build AI agents that run reliably in your real environment — integrated with your systems, trained on your data, and optimized for your specific workflows. Every agent ships with monitoring, logging, and a clear escalation path for edge cases.</p>
+        <ul class="check-list">
+          <li>Custom-built for your processes — not one-size-fits-all templates</li>
+          <li>Deep integration with your existing CRM, ERP, and business tools</li>
+          <li>Security-first design with data privacy controls built in</li>
+          <li>Measurable success criteria agreed before development begins</li>
+          <li>Ongoing support, performance monitoring, and model updates</li>
+        </ul>
+        <a class="btn-primary" href="../contact.html">Discuss Your Agent Requirements →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section>
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Client Stories</span>
+      <h2 class="section-title">What Our Clients Say</h2>
+      <p class="section-subtitle">Real results from businesses that deployed AI agents and measured the difference.</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"3WeSolution's AI automation took our invoice processing from 3 days to 3 hours. The ROI was visible within the first month."</p>
+        <div class="testimonial-author">
+          <div class="avatar">👩‍💼</div>
+          <div><h5>Sarah Chen</h5><span>COO, Pacific Logistics Group</span></div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"Our AI assistant handles tier-1 customer queries 24/7. Resolution rates are up and our support costs are down 35%."</p>
+        <div class="testimonial-author">
+          <div class="avatar">👩‍💼</div>
+          <div><h5>Jennifer Wu</h5><span>Customer Experience Director, BrightRetail</span></div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"We automated our entire customer onboarding workflow with their agent pipeline. Our team now focuses on relationships, not paperwork."</p>
+        <div class="testimonial-author">
+          <div class="avatar">👨‍💼</div>
+          <div><h5>James Tan</h5><span>VP Operations, FinBridge Asia</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready to Put AI to Work for Your Business?</h2>
+    <p>Tell us your biggest operational pain point and we'll show you exactly how an AI agent can solve it — with a clear timeline and measurable outcomes.</p>
+    <a class="btn-white" href="../contact.html">Get Your Free Agent Assessment →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="border:none;padding:32px 0">
+      <p>© 2026 3WeSolution. All rights reserved. | <a href="mailto:info@3wesolution.com" style="color:var(--text-muted)">info@3wesolution.com</a></p>
+      <div class="footer-bottom-links">
+        <a href="../index.html">Home</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../cn/services/ai-agents.html">中文</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<!-- Tidio Chat -->
+<script src="//code.tidio.co/ytiepywz4oqgyqwiyujissnpgxysed71.js" async></script>
+</body>
+</html>

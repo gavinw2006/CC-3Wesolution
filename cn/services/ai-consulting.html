@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI战略咨询 – 3WeSolution</title>
+  <meta name="description" content="评估AI就绪度、识别高回报应用场景、制定切实可行的AI路线图并建立治理框架——在AI转型的每个阶段获得专业指导。"/>
+  <link rel="stylesheet" href="../../css/style.css"/>
+  <style>
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+      gap: 2px;
+      background: #e8e8ed;
+      border: 1px solid #e8e8ed;
+      border-radius: 24px;
+      overflow: hidden;
+      margin-top: 56px;
+    }
+    .feature-card {
+      background: #fff;
+      padding: 36px 32px;
+      transition: background .25s ease;
+    }
+    .feature-card:hover { background: #f5f5f7; }
+    .feature-card .fc-icon { font-size: 28px; margin-bottom: 16px; }
+    .feature-card h3 { font-size: 17px; font-weight: 600; margin-bottom: 9px; letter-spacing: -.2px; }
+    .feature-card p { font-size: 14px; color: #6e6e73; margin: 0; line-height: 1.65; }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2px;
+      background: #e8e8ed;
+      border: 1px solid #e8e8ed;
+      border-radius: 24px;
+      overflow: hidden;
+      margin-top: 56px;
+    }
+    .process-step {
+      background: #fff;
+      padding: 40px 32px;
+      transition: background .25s ease;
+    }
+    .process-step:hover { background: #f5f5f7; }
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px; height: 40px;
+      background: #0071e3;
+      border-radius: 50%;
+      font-weight: 600;
+      font-size: 15px;
+      color: #fff;
+      margin-bottom: 18px;
+    }
+    .process-step h3 { font-size: 17px; font-weight: 600; margin-bottom: 10px; letter-spacing: -.2px; }
+    .process-step p { font-size: 14px; color: #6e6e73; margin: 0; line-height: 1.65; }
+
+    .deliverable-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2px;
+      background: #e8e8ed;
+      border: 1px solid #e8e8ed;
+      border-radius: 24px;
+      overflow: hidden;
+      margin-top: 56px;
+    }
+    .deliverable-card {
+      background: #fff;
+      padding: 36px 32px;
+      transition: background .25s ease;
+    }
+    .deliverable-card:hover { background: #f5f5f7; }
+    .deliverable-card .del-icon { font-size: 28px; margin-bottom: 14px; }
+    .deliverable-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; letter-spacing: -.2px; }
+    .deliverable-card p { font-size: 14px; color: #6e6e73; margin: 0; line-height: 1.65; }
+  </style>
+</head>
+<body class="cn">
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="../../index.html">3W<span>eSolution</span></a>
+    <ul class="nav-menu">
+      <li><a href="../../index.html">首页</a></li>
+      <li class="nav-dropdown"><a href="#" class="active">服务</a>
+        <div class="dropdown-menu">
+          <a href="website-design.html"><span class="icon">🎨</span>网站设计</a>
+          <a href="web-hosting.html"><span class="icon">☁️</span>网站托管与运维</a>
+          <a href="certificate.html"><span class="icon">🔒</span>证书管理</a>
+          <a href="domain.html"><span class="icon">🌐</span>域名管理</a>
+          <a href="email.html"><span class="icon">✉️</span>邮箱管理</a>
+          <a href="social-media.html"><span class="icon">📱</span>社交媒体管理</a>
+          <a href="digitalization.html"><span class="icon">⚡</span>数字化转型</a>
+          <a href="digital-risk.html"><span class="icon">🛡️</span>数字风险防护</a>
+          <a href="ai-workflow-automation.html"><span class="icon">🤖</span>AI工作流自动化</a>
+          <a href="secure-ai-adoption.html"><span class="icon">🔐</span>安全AI采纳</a>
+          <a href="agentic-ai-solutions.html"><span class="icon">🧠</span>智能体AI解决方案</a>
+          <a href="ai-application-security.html"><span class="icon">🛡️</span>AI应用安全</a>
+          <a href="ai-agents.html"><span class="icon">🦾</span>AI智能体开发</a>
+          <a href="llm-solutions.html"><span class="icon">💡</span>大语言模型解决方案</a>
+          <a href="ai-consulting.html"><span class="icon">🎯</span>AI战略咨询</a>
+          <a href="ai-packages.html"><span class="icon">📦</span>AI转型套餐</a>
+        </div>
+      </li>
+      <li><a href="../../about.html">关于我们</a></li>
+      <li><a href="../../contact.html">联系我们</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a class="lang-switch" href="../../services/ai-consulting.html">
+        <span>🌐</span>EN | <span class="active-lang">中文</span>
+      </a>
+      <button class="nav-toggle" aria-label="菜单"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="../../index.html">首页</a> › <a href="#">服务</a> › AI战略咨询</div>
+    <span class="section-label">AI战略咨询</span>
+    <h1>AI转型，从<br>正确的战略出发。</h1>
+    <p>大多数AI项目的失败，根源不在技术——而在目标不清、应用场景选择失当、治理体系缺失。我们帮助企业构建清晰、可落地的AI战略，明确AI在哪里创造最大价值、如何安全实施，以及如何从第一天起就量化成效。</p>
+  </div>
+</section>
+
+<!-- ── 我们提供什么 ── -->
+<section>
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">我们提供什么</span>
+      <h2 class="section-title">AI旅程每个阶段的专业战略指导</h2>
+      <p class="section-subtitle">无论您刚刚开始探索AI，还是正在扩展现有项目，我们都能提供专业支持与结构化框架，让您有信心、不走弯路地向前推进。</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="fc-icon">🔎</div>
+        <h3>AI就绪度评估</h3>
+        <p>对您组织的数据成熟度、技术基础设施、人才能力与文化准备度进行结构化评估——提供诚实客观的基准现状，作为建设起点。</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">🎯</div>
+        <h3>高回报应用场景识别</h3>
+        <p>系统分析您的业务流程，识别AI在生产率提升、成本削减与收入增长方面的最大机会——按影响力与实施复杂度双维度排序优先级。</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">🗺️</div>
+        <h3>AI路线图制定</h3>
+        <p>分阶段、有优先级的路线图，逻辑化排序您的AI投资——先以快速成效积累动力，再逐步推进更复杂的转型举措。</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">⚖️</div>
+        <h3>AI治理框架建设</h3>
+        <p>负责任AI使用的政策、流程与问责机制——涵盖数据伦理、模型透明度、偏见缓解、监管合规与事件响应程序。</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">👥</div>
+        <h3>变革管理与员工赋能</h3>
+        <p>结构化项目推动领导层与员工共同踏上AI旅程——从高管对齐工作坊，到一线团队采纳AI增强工具的实操培训。</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">📈</div>
+        <h3>AI绩效量化体系</h3>
+        <p>KPI框架与度量系统，追踪AI投资的业务影响——将技术指标与商业成果直接关联，让管理层清晰看到价值所在。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 我们如何工作 ── -->
+<section class="bg-secondary">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">我们的咨询方式</span>
+      <h2 class="section-title">务实战略，而非理论框架</h2>
+      <p class="section-subtitle">我们将深度技术专长与业务战略思维相结合——确保每项建议都立足于您当下的数据、系统与团队能力，真正可以落地执行。</p>
+    </div>
+
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">1</div>
+        <h3>需求调研与干系人对齐</h3>
+        <p>与您的领导层、IT团队及业务部门开展工作坊，深入了解业务目标、当前痛点、现有技术投资与组织约束条件。</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">2</div>
+        <h3>现状评估与机会分析</h3>
+        <p>深度分析您的数据格局、业务流程与竞争环境——以证据和行业基准为支撑，清晰呈现AI在哪里创造价值、在哪里不适用。</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">3</div>
+        <h3>战略与路线图共创</h3>
+        <p>与您的团队联合设计AI战略——从一开始就确保归属感与认同度——产出分阶段路线图，包含明确里程碑、资源需求与预期成果。</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">4</div>
+        <h3>实施监督与治理落地</h3>
+        <p>在实施启动后持续参与——审查供应商选型、监督试点项目、建立治理流程，并在现实与计划出现偏差时及时纠偏。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 交付成果 ── -->
+<section>
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">您将获得什么</span>
+      <h2 class="section-title">可驱动行动的具体交付成果</h2>
+      <p class="section-subtitle">每次咨询参与都会产出具体、可执行的成果——而非堆在抽屉里的幻灯片。</p>
+    </div>
+
+    <div class="deliverable-grid">
+      <div class="deliverable-card">
+        <div class="del-icon">📋</div>
+        <h3>AI就绪度报告</h3>
+        <p>从数据、基础设施、人才、领导力、文化与治理六个维度评分，并针对每个维度提供具体改进建议。</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="del-icon">🏆</div>
+        <h3>应用场景优先级矩阵</h3>
+        <p>排序后的AI应用场景清单，包含每个机会的预估ROI、实施复杂度、数据需求与推荐技术路线。</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="del-icon">🗓️</div>
+        <h3>18个月AI路线图</h3>
+        <p>分阶段实施计划，明确里程碑、资源配置、技术决策与成功指标——由您的领导团队审阅并认领所有权。</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="del-icon">📜</div>
+        <h3>AI治理政策包</h3>
+        <p>定制化政策文件，涵盖合理使用、数据处理、模型监督、供应商管理与事件响应——可直接提交董事会审批与监管审查。</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="del-icon">📊</div>
+        <h3>AI商业案例模板</h3>
+        <p>财务模型与演示框架，助您构建内部投资立案——让您的团队有把握地争取AI项目的预算批准。</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="del-icon">🎓</div>
+        <h3>高管AI素养工作坊</h3>
+        <p>为管理层与董事会量身定制的半天课程——建立提出正确问题、做出明智决策、规避高代价错误所需的AI认知基础。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 为何选择3WeSolution ── -->
+<section class="bg-secondary">
+  <div class="container">
+    <div class="two-col">
+      <div class="col-visual">🎯</div>
+      <div class="col-content">
+        <span class="section-label">为何选择3WeSolution</span>
+        <h2>兼具实施能力的战略咨询</h2>
+        <p>大多数咨询公司只出战略，我们出战略、也做落地。因为我们自己构建AI智能体、集成大语言模型、部署智能体系统，所以我们的战略建议来自工程现实——而非市场宣传册。我们清楚什么是真正可行的，需要多久，花多少钱。</p>
+        <ul class="check-list">
+          <li>业务战略与AI工程专长的双重覆盖</li>
+          <li>厂商中立建议——我们推荐正确的方案，而非高利润的方案</li>
+          <li>咨询工作与动手实施能力并驾齐驱</li>
+          <li>跨受监管行业的丰富经验：金融、医疗、物流</li>
+          <li>双语交付——中英文服务亚太地区企业客户</li>
+        </ul>
+        <a class="btn-primary" href="../../contact.html">预约AI战略会谈 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 客户评价 ── -->
+<section>
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">客户心声</span>
+      <h2 class="section-title">客户这样评价我们</h2>
+      <p class="section-subtitle">将AI雄心转化为结构化、可量化项目的企业真实反馈。</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"3WeSolution给了我们以前没有的清晰方向。我们从'应该用AI做点什么'变成了一份获得董事会批准、第一年执行计划明确的路线图。"</p>
+        <div class="testimonial-author">
+          <div class="avatar">👨‍💼</div>
+          <div><h5>金安德鲁</h5><span>首席执行官，区域保险集团</span></div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"他们的就绪度评估让我们避免了将200万美元投入到数据基础设施无法支撑的AI项目。仅这一点就已值回咨询投入。"</p>
+        <div class="testimonial-author">
+          <div class="avatar">👩‍💼</div>
+          <div><h5>张琳达</h5><span>首席信息官，制造业集团</span></div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"他们的负责任AI框架帮助我们同时满足了法律团队和董事会的要求，技术深度与商业洞察的结合实属难得。"</p>
+        <div class="testimonial-author">
+          <div class="avatar">👨‍💼</div>
+          <div><h5>朴大卫</h5><span>首席技术官，医核解决方案</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section">
+  <div class="container">
+    <h2>让我们一起构建您的AI战略。</h2>
+    <p>从免费的60分钟战略会谈开始——我们将评估您的现状、了解您的目标，并为您勾勒切实可行的前进路径。</p>
+    <a class="btn-white" href="../../contact.html">预约免费战略会谈 →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="border:none;padding:32px 0">
+      <p>© 2026 3WeSolution. 版权所有。 | <a href="mailto:info@3wesolution.com" style="color:var(--text-muted)">info@3wesolution.com</a></p>
+      <div class="footer-bottom-links">
+        <a href="../../index.html">首页</a>
+        <a href="../../contact.html">联系我们</a>
+        <a href="../../services/ai-consulting.html">English</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../js/main.js"></script>
+<!-- Tidio Chat -->
+<script src="//code.tidio.co/ytiepywz4oqgyqwiyujissnpgxysed71.js" async></script>
+</body>
+</html>
